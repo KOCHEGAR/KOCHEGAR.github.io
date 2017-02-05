@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="leave-px">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мои работы</title>
+  <script src='js/font-loader.js'></script>
+
+  <link href="css/main.min.rem.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="top-menu container container--custom">
+      <div class="row">
+        <div class="col-x10 col-l12">
+          <div class="top-menu__wrap">
+            <div class="top-menu__photo-wrap">
+              <!-- тут надо будет настроить позже -start -->
+              <div class="top-menu__photo">
+                <img src="img/rasterImages/my_own_logo.png">
+              </div>
+              <div class="top-menu__photo-descr"></div>
+              <!-- тут надо будет настроить позже -end -->
+
+            </div>
+            <div class="soc-icons  soc-icons--top-socials">
+              <ul class="soc-icons__list">
+                <li class="soc-icons__item">
+                  <a href="#" class="soc-icons__link">
+
+                    <svg class="svg-ic svg-ic--vk">
+                      <use xlink:href="#vk-icon"></use>
+                    </svg>
+                    <span class="soc-icons__link-text">Вконтакте</span>
+                  </a>
+                </li>
+                <li class="soc-icons__item">
+                  <a href="#" class="soc-icons__link">
+
+                    <svg class="svg-ic svg-ic--github">
+                      <use xlink:href="#github-icon"></use>
+                    </svg>
+                    <span class="soc-icons__link-text">Гитхаб</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-x2 mob-menu">
+          <nav class="mob-menu__nav">
+            <div class="mob-menu__trigger">
+
+              <svg class="svg-ic svg-ic--hamburger">
+                <use xlink:href="#menu-hamburger-icon"></use>
+              </svg>
+              <svg class="svg-ic svg-ic--close">
+                <use xlink:href="#menu-close-icon"></use>
+              </svg>
+              <!-- place for some hacky techniques -->
+            </div>
+            <div class="mob-menu__wrap">
+              <ul class="mob-menu__list">
+                <li class="active-item"><a href="index.html">Обо мне</a>
+                </li>
+                <li><a href="my-works.html">Мои работы</a>
+                </li>
+                <li><a href="contact-me.html">Связаться со мной</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- svg include -->
+
+  <div class="wrapper">
+    <div class="container  container--custom">
+      <div class="row">
+        <main class="my-works  col-x12 col-l9  col-l--order2">
+          <section class="my-works__wrap  section-background">
+            <h1 class="my-works__heading  section-title">Мои работы</h1>
+            <ul class="my-works__list">
+              <li class="my-works__item">
+                <a class="project" href="#" target="_blank">
+                  <span class="project__img">
+                    <img src="img/rasterImages/project-1.jpg">
+
+                    <span class="project__img-overlay">
+                      <span class="project__img-overlay-text">посмотреть</span>
+                  </span>
+                  </span>
+                  <span class="project__address">
+                    адрес сайта
+                  </span>
+                  <span class="project__short-preview">
+                    короткое описание
+                    короткое описание
+                  </span>
+                </a>
+              </li>
+
+            </ul>
+          </section>
+        </main>
+        <aside class="left-sidebar  col-l3 col-l--order1">
+          <ul class="aside-nav">
+            <li class="aside-nav__item ">
+              <a href="index.html" class="aside-nav__link">Обо мне</a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="my-works.html" class="aside-nav__link">Мои работы</a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="contact-me.html" class="aside-nav__link">Связаться со мной</a>
+            </li>
+          </ul>
+
+        </aside>
+
+        <div class="col-x12 soc-icons soc-icons--bottom-socials">
+          <ul class="soc-icons__list">
+            <li class="soc-icons__item">
+              <a href="#" class="soc-icons__link">
+
+                <svg class="svg-ic svg-ic--vk">
+                  <use xlink:href="#vk-icon"></use>
+                </svg>
+                <span class="soc-icons__link-text">Вконтакте</span>
+              </a>
+            </li>
+            <li class="soc-icons__item">
+              <a href="#" class="soc-icons__link">
+
+                <svg class="svg-ic svg-ic--github">
+                  <use xlink:href="#github-icon"></use>
+                </svg>
+                <span class="soc-icons__link-text">Гитхаб</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container container--custom">
+      <div class="row">
+        <div class="col-x12">
+          <div class="page-footer__content">
+            <p class="page-footer__copyright"><span class="copy-sign">&copy;</span> Все права защищены.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src='js/main.js'></script>
+  <script src='js/svgToLocalStorage.min.js'></script>
+
+
+</body>
+
+</html>
