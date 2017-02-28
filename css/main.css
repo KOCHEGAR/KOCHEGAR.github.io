@@ -1052,7 +1052,7 @@ body {
 
 .work-expr__descr {
   margin-top: 5px;
-  text-align: left;
+  text-align: center;
 }
 
 .work-expr__job-title {
@@ -1107,18 +1107,17 @@ body {
 
 .edu-info__descr {
   margin-top: 10px;
+  text-align: center;
 }
 
 .edu-info__institution-name {
   font: 17px/1.2 "firasans-book",Arial,Tahoma,sans-serif;
   color: #5a636b;
-  text-align: left;
 }
 
 .edu-info__edu-time {
   font: 15px/1.1 "firasans-light ",Arial,Tahoma,sans-serif;
   color: #5a636b;
-  text-align: left;
   margin-top: 4px;
 }
 
@@ -2929,6 +2928,7 @@ body {
 
   .work-expr__descr {
     margin-left: 25px;
+    text-align: left;
   }
 
   .edu-info {
@@ -2956,6 +2956,7 @@ body {
 
   .edu-info__descr {
     margin-left: 25px;
+    text-align: left;
   }
 
   .edu-info__institution-name {
