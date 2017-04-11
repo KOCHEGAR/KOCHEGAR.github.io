@@ -71,6 +71,10 @@ $(document).ready(function() {
   // var mq = window.matchMedia('@media all and (min-width: 1201px)');
 
 
+  $('.project--not-active-link-yet').click(function(e){
+      e.preventDefault();
+  });
+
   ///----- установка активного элемента меню от url на стороне клиента
   $(function() {
     $('.aside-nav__item, .mob-menu__list li').each(function(indx) { //поиск нужных элементов 

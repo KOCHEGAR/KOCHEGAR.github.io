@@ -1538,6 +1538,40 @@ body {
   color: #5a636b;
 }
 
+.project__img--no-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #399db3;
+}
+
+.project__img--no-image img {
+  background-color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.project__img--no-image img:after {
+  content: attr(alt);
+  background-color: inherit;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .add-new-project {
   border: 2px dashed #3ba8c0;
   border-radius: 5px;
