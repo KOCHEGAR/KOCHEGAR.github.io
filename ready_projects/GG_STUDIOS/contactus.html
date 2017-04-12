@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="leave-px">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заголовок</title>
+  <script src='js/font-loader.js'></script>
+
+  <link href="css/main.min.rem.css" rel="stylesheet">
+  <!-- <link href="css/main.min.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+
+  <header class="page-header page-header--notIndexPage">
+    <div class="width_container">
+      <div class="flex_container flex_vert_align_center">
+        <div class="logo">
+
+          <a class="logo__link" href="index.html">
+            <img class="logo__img" src="img/rasterImages/site_logo.png" alt="GG_STUDIOS LOGO">
+          </a>
+        </div>
+        <nav class="sitenav">
+          <ul class="sitenav__list">
+            <li><a class="sitenav__link" href="about_us.html">About us</a>
+            </li>
+            <li><a class="sitenav__link" href="team.html">Our team</a>
+            </li>
+            <li><a class="sitenav__link" href="projects.html">Projects</a>
+            </li>
+            <li><a class="sitenav__link" href="contactus.html">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- svg include -->
+
+  <div class="wrapper wrapper--noIndexPage">
+    <div class="width_container">
+      <div class="contactus">
+        <h1 class="subpage-heading">Contact form</h1>
+        <form id="contactus-form" method="post">
+          <!-- <input type="hidden" name="">
+        <input type="hidden" name="">
+        <input type="hidden" name=""> -->
+          <div class="contactus__formwrap">
+            <div class="contactus__part">
+              <fieldset>
+                <legend class="hide-text">Contact input group</legend>
+                <div class="contactus__inputwrap" data-outside_input_text="Name">
+                  <input type="text" name="name" required>
+                </div>
+                <div class="contactus__inputwrap" data-outside_input_text="Email Address">
+                  <input type="email" name="email" required>
+                </div>
+                <div class="contactus__inputwrap" data-outside_input_text="Phone">
+                  <input type="number" name="phone">
+                </div>
+                <div class="contactus__inputwrap" data-outside_input_text="Company / Convention">
+                  <input type="text" name="company">
+                </div>
+              </fieldset>
+            </div>
+            <div class="contactus__part">
+              <div class="contactus__contact-info">
+
+                <div class="contactus__email">
+                  <a href="mailto:info@ggstudios.games">
+
+                    <svg class="svg-ic svg-ic--envelop">
+                      <use xlink:href="#envelop-icon"></use>
+                    </svg>
+                    info@ggstudios.games
+                  </a>
+                </div>
+                <ul class="contactus__soc-icons">
+                  <li>
+                    <a href="#">
+
+                      <svg class="svg-ic svg-ic--twitter">
+                        <use xlink:href="#twitter-icon"></use>
+                      </svg>
+                      <span class="hide-text">twitter link</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+
+                      <svg class="svg-ic svg-ic--facebook">
+                        <use xlink:href="#fb-icon"></use>
+                      </svg>
+                      <span class="hide-text">facebook link</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+
+                      <svg class="svg-ic svg-ic--youtube">
+                        <use xlink:href="#youtube-icon"></use>
+                      </svg>
+                      <span class="hide-text">youtube link</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+
+                      <svg class="svg-ic svg-ic--twitch">
+                        <use xlink:href="#twitch-icon"></use>
+                      </svg>
+                      <span class="hide-text">twitch link</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="contactus__phone">
+                  <a href="tel:867-903-4084">
+
+                    <svg class="svg-ic svg-ic--phone">
+                      <use xlink:href="#phone-icon"></use>
+                    </svg>
+                    867-903-4084
+                  </a>
+                </div>
+              </div>
+
+              <div class="contactus__inputwrap textarea" data-outside_input_text="Message">
+                <textarea name="message" required></textarea>
+              </div>
+              <div class="contactus__btnwrap">
+                <button class="contactus__send-btn btn-style">Send message</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay ">
+    <div class="modal-content">
+      <div class="modal-message">
+        Your message was successfully sent, we will contact you within 24 hours.
+      </div>
+      <button class="modal-close-btn btn-style" type="submit">Ok</button>
+    </div>
+  </div>
+
+  <!-- <script src='js/main.js'></script> -->
+  <script src='js/main.min.js'></script>
+  <script src='js/svgToLocalStorage.min.js'></script>
+</body>
+
+</html>
