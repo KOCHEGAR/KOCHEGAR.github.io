@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Заголовок</title>
+  <title>Contact us</title>
   <script src='js/font-loader.js'></script>
 
   <link href="css/main.min.rem.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 
   <header class="page-header page-header--notIndexPage">
-    <div class="width_container">
+    <div class="width_container fading">
       <div class="flex_container flex_vert_align_center">
         <div class="logo">
 
@@ -43,10 +43,8 @@
 
   </header>
 
-  <!-- svg include -->
-
   <div class="wrapper wrapper--noIndexPage">
-    <div class="width_container">
+    <div class="width_container fading">
       <div class="contactus">
         <h1 class="subpage-heading">Contact form</h1>
         <form id="contactus-form" method="post">
@@ -59,9 +57,12 @@
                 <legend class="hide-text">Contact input group</legend>
                 <div class="contactus__inputwrap" data-outside_input_text="Name">
                   <input type="text" name="name" required>
+                  <span class="overlay-input-text">required field</span>
                 </div>
                 <div class="contactus__inputwrap" data-outside_input_text="Email Address">
                   <input type="email" name="email" required>
+                  <span class="overlay-input-text">required field</span>
+
                 </div>
                 <div class="contactus__inputwrap" data-outside_input_text="Phone">
                   <input type="number" name="phone">
@@ -134,6 +135,8 @@
 
               <div class="contactus__inputwrap textarea" data-outside_input_text="Message">
                 <textarea name="message" required></textarea>
+                <span class="overlay-input-text">required field</span>
+
               </div>
               <div class="contactus__btnwrap">
                 <button class="contactus__send-btn btn-style">Send message</button>

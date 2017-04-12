@@ -14,7 +14,7 @@ $(document).ready(function() {
       previousTeammateInfo;
 
 
-  var animdur = 300;
+  var animdur = 300; 
 
   function customAnim(ob, num, num2, cb) {
      callback = cb || function (){}
@@ -163,60 +163,25 @@ $(document).ready(function() {
   // ---- ФУНКЦИОНАЛ СТРАНИЦЫ projects
 
 
-   /*$('.projects__list li:not(:first-child) .projects__project-button').on({
-
-      'mouseenter mouseleave focus blur' : function (e) {
-          toggleBigProjectBg( e, $(this) );
-
-          
-      },
-      'mouseenter focus' : function (e) {
-          $(this).parent().addClass('selected');
-
-          customAnim($('.projects__list li:not(.selected)'), 1, 0 );
-          customAnim( $(this).parent(), 1, 0.5 );
-      },
-      'mouseleave blur' : function (e) {
-          $(this).parent().removeClass('selected');
-          customAnim( $('.projects__list li'), 0, 1 );
-      }
-
-   })
-  */
-   /*var bigimg = $('.projects__big-img');
-   function toggleBigProjectBg(event, object) {
-
-      var bgimgurl = getDataAttr( object, 'data-fullbgimgurl' );
-
-      //  через || не работает правильно
-      if (event.type == 'mouseenter') {
-          bigimg.attr('src', bgimgurl);
-          customAnim(bigimg, 0, 1);
-
-      }
-      else if (event.type == 'focus') {
-          bigimg.attr('src', bgimgurl);
-          customAnim(bigimg, 0, 1);
-      }
-      else if (event.type == 'mouseleave')  {
-          customAnim(bigimg, 1, 0);
-      }
-      else if (event.type == 'blur')  {
-          customAnim(bigimg, 1, 0);
-      } 
-   }*/
-
    $('.project-popup__close-btn').on({
       'click': function (e) {
-          customAnim( $('.project-popup'), 1,0, function(){
-            $('.project-popup').removeClass('project-popup--open');
-          });
+
+        var popup = $('.project-popup');
+
+        customAnim( popup.parent() , 1,0, function(){
+          $('body').css({'overflow':'auto'});
+
+          popup.removeClass('project-popup--open');
+          popup.parent().removeClass('modalwindow--opened');
+        });
       }
    });
 
   
    $('.projects__list li:not(:first-child) .projects__project-button').on({
       'click' : function (e) {
+          
+          e.preventDefault();
           
           var discipline, date, description, title, popup;
 
@@ -232,21 +197,26 @@ $(document).ready(function() {
           popup.find('.project-popup__date').html(date);
 
           ///////
+          
+          $('body').css({'overflow':'hidden'});
+          popup.parent().addClass('modalwindow--opened');
+          
           popup.addClass('project-popup--open');
-          customAnim( $('.project-popup'), 0, 1);
+
+          customAnim( popup.parent(), 0, 1 );
       }
    });
   
 
-   $('.contactus__inputwrap input').on({
-      'focus' : function (e) {
+   // $('.contactus__inputwrap input').on({
+   //    'focus' : function (e) {
           
-          $(this).parent().addClass('input-focused');
-      },
-      'blur' : function (e) {
-          $(this).parent().removeClass('input-focused');
-      }
-   });
+   //        $(this).parent().addClass('input-focused');
+   //    },
+   //    'blur' : function (e) {
+   //        $(this).parent().removeClass('input-focused');
+   //    }
+   // });
 
    /// ------  ФУНКЦИОНАЛ СТРАНИЦЫ Contact us -START
 
