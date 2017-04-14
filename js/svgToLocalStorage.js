@@ -8,6 +8,12 @@
      
         var file     = 'img/svgImages/svgSymbol/symbols.svg',
             revision = 1;
+
+            //  keys for localstorage svg's
+            // менять при необходимости
+        var portfolioSVGrevision = 'portfolioSVGrevision',
+            portfolioSVGcontent = 'portfolioSVGcontent' ;
+
      
         if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
             return true;
@@ -25,9 +31,9 @@
                 else document.addEventListener( 'DOMContentLoaded', insertIT );
             };
      
-        if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
+        if( isLocalStorage && localStorage.getItem( portfolioSVGrevision ) == revision )
         {
-            data = localStorage.getItem( 'inlineSVGdata' );
+            data = localStorage.getItem( portfolioSVGcontent ); 
             if( data )
             {
                 insert();
@@ -47,8 +53,8 @@
                     insert();
                     if( isLocalStorage )
                     {
-                        localStorage.setItem( 'inlineSVGdata',  data );
-                        localStorage.setItem( 'inlineSVGrev',   revision );
+                        localStorage.setItem( portfolioSVGcontent,  data );
+                        localStorage.setItem( portfolioSVGrevision,   revision );
                     }
                 }
             }

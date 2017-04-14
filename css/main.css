@@ -2203,6 +2203,11 @@ body {
   border: 1px solid red;
 }
 
+.fading {
+  -webkit-animation: fading 1s ease;
+  animation: fading 1s ease;
+}
+
 @media (min-width: 481px) {
   .col-s1 {
     -webkit-flex-basis: 8.33333%;
@@ -3795,5 +3800,25 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
