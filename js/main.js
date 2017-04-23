@@ -41,18 +41,18 @@ $(document).ready(function() {
 
     _toggleMobileMenu = function() {
 
-      burger_icon.toggle('fast');
-      close_icon.toggle('fast');
-      menu_wrap.slideToggle('fast');
+      burger_icon.toggleClass("opacity-0");
+      close_icon.toggleClass("opacity-0");
+      menu_wrap.slideToggle("fast");
 
     };
     
     $(document).on('click', function(e) {
       if (!$(e.target).closest(".mob-menu__trigger").length) {
       
-        burger_icon.show('fast');
-        close_icon.hide('fast');
-        menu_wrap.slideUp('fast');
+        burger_icon.removeClass("opacity-0");
+        close_icon.addClass("opacity-0");
+        menu_wrap.slideUp("fast");
       }
       e.stopPropagation();
     });
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 
   $('.project--not-active-link-yet').click(function(e){
-      e.preventDefault();
+      e.preventDefault(); 
   });
 
   ///----- установка активного элемента меню от url на стороне клиента
