@@ -589,8 +589,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 * {
-  -webkit-transition: width 0.3s, height 0.3s, padding 0.3s, margin 0.3s, font-size 0.3s;
-  transition: width 0.3s, height 0.3s, padding 0.3s, margin 0.3s, font-size 0.3s;
+  -webkit-transition: width 0.3s, height 0.3s, padding 0.3s, margin 0.3s, font-size 0.3s, opacity 0.3s;
+  transition: width 0.3s, height 0.3s, padding 0.3s, margin 0.3s, font-size 0.3s, opacity 0.3s;
 }
 
 .width_container {
@@ -1048,9 +1048,9 @@ body {
 }
 
 .team {
-  min-height: 1000px;
   padding-left: 28px;
   padding-top: 125px;
+  padding-bottom: 32px;
   overflow: hidden;
 }
 
@@ -1760,25 +1760,27 @@ body {
 
 .overlay-input-text {
   position: absolute;
+  right: 0;
+  bottom: 14px;
   color: #03ff8f;
-  top: 12px;
-  right: 4%;
-  font: 16px/1 "poppins-regular", Arial, Tahoma, sans-serif;
-  opacity: 0;
+  font: 14px/1 "poppins-regular", Arial, Tahoma, sans-serif;
+  text-shadow: 0 0 5px rgba(131, 251, 247, 0.85);
   letter-spacing: 2px;
   text-transform: uppercase;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, bottom 0.3s;
+  transition: opacity 0.3s, bottom 0.3s;
 }
 
 .contactus__inputwrap input:focus:required:invalid,
 .contactus__inputwrap textarea:focus:required:invalid {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .contactus__inputwrap input:focus:required:invalid + .overlay-input-text,
 .contactus__inputwrap textarea:focus:required:invalid + .overlay-input-text {
   opacity: 1;
+  bottom: -20px;
 }
 
 .contactus__contact-info {
@@ -2024,8 +2026,8 @@ body {
 }
 
 .fading {
-  -webkit-animation: fading 1s ease;
-          animation: fading 1s ease;
+  -webkit-animation: fading 1.4s ease;
+          animation: fading 1.4s ease;
 }
 
 @-webkit-keyframes fading {
@@ -2089,6 +2091,34 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .about-us__page-infowrap {
+    width: 80%;
+  }
+  .about-us {
+    margin-top: 70px;
+  }
+  .about-us__item:before, .about-us__left-side-wrap {
+    display: none;
+  }
+  .about-us__page-heading {
+    font-size: 100px;
+  }
+  .about-us__item {
+    padding-top: 39px;
+    min-height: 200px;
+  }
+  .about-us__item:first-child {
+    min-height: 390px;
+  }
+  .svg-icons-wrap {
+    margin: 0;
+    display: inline-block;
+  }
+  .about-us__item-heading {
+    margin-top: 0;
+    font-size: 32px;
+    margin-left: 30px;
   }
   .team__peoples li {
     width: 112px;
@@ -2161,7 +2191,32 @@ body {
     margin: 23px;
   }
   .about-us__page-infowrap {
-    width: 70%;
+    width: 100%;
+  }
+  .about-us {
+    margin-top: 70px;
+  }
+  .about-us__item:before, .about-us__left-side-wrap {
+    display: none;
+  }
+  .about-us__page-heading {
+    font-size: 100px;
+  }
+  .about-us__item {
+    padding-top: 39px;
+    min-height: 200px;
+  }
+  .about-us__item:first-child {
+    min-height: 390px;
+  }
+  .svg-icons-wrap {
+    margin: 0;
+    display: inline-block;
+  }
+  .about-us__item-heading {
+    margin-top: 0;
+    font-size: 32px;
+    margin-left: 30px;
   }
   .team__peoples li {
     width: 100px;
@@ -2691,6 +2746,11 @@ body {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+  }
+  .team__teammate-skills {
+    position: relative;
+    -webkit-animation: an 2s;
+            animation: an 2s;
   }
 }
 
