@@ -1136,6 +1136,7 @@ body {
   padding: 10px;
   font: 20px/1 "firasans-book",Arial,Tahoma,sans-serif;
   color: #ededed;
+  text-align: center;
   padding-left: 20px;
 }
 
@@ -1148,10 +1149,10 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1182,11 +1183,11 @@ body {
 
 .contacts__link {
   color: #ededed;
-  min-width: 110px;
-  font: 16px/1.1 "firasans-book",Arial,Tahoma,sans-serif;
+  word-break: break-all;
+  font: 16px/1.8 "firasans-book",Arial,Tahoma,sans-serif;
 }
 
-.contacts__link:hover {
+.contacts__link:hover,.contacts__link:focus {
   color: #fff;
 }
 
