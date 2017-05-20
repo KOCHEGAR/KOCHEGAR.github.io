@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="leave-px">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spacewolff</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900%7CRoboto:400,500,700" rel="stylesheet">
+  <link href="css/main.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="border: 0 !important;clip: rect(0 0 0 0) !important;height: 1px !important;margin: -1px !important;overflow: hidden !important;padding: 0 !important; position: absolute !important;width: 1px !important;">
+    <symbol id="add-user" viewBox="0 0 69.196 69.196">
+      <path d="M4.581 67.315h43.036a2 2 0 0 0 0-4H6.641c.908-15 11.871-27.118 15.146-30.332a17.188 17.188 0 0 0 7.584 1.74c2.696 0 5.239-.65 7.517-1.753 1.571 1.471 5.984 5.886 9.654 12.305a1.996 1.996 0 0 0 2.729.737 2 2 0 0 0 .743-2.729c-3.49-6.104-7.522-10.456-9.646-12.534 3.872-3.184 6.347-8.009 6.347-13.402C46.715 7.782 38.934 0 29.37 0c-9.565 0-17.347 7.782-17.347 17.347 0 5.371 2.455 10.178 6.299 13.363-4.454 4.486-15.743 17.589-15.743 34.546.002 1.104.898 2.059 2.002 2.059zm11.444-49.968C16.025 9.988 22.012 4 29.372 4c7.359 0 13.345 5.987 13.345 13.347s-5.986 13.347-13.345 13.347c-7.36-.001-13.347-5.988-13.347-13.347z" />
+      <path d="M43.617 54.315a2 2 0 0 0 0 4h8v8.881a2 2 0 0 0 4 0v-8.881h9a2 2 0 0 0 0-4h-9v-9.119a2 2 0 0 0-4 0v9.119h-8z" />
+    </symbol>
+    <symbol id="big-wall-clock" viewBox="0 0 205.417 205.417">
+      <path d="M102.708 205.417C46.075 205.417 0 159.342 0 102.709S46.075 0 102.708 0c56.634 0 102.709 46.075 102.709 102.708s-46.075 102.709-102.709 102.709zm0-199.417C49.383 6 6 49.383 6 102.709s43.383 96.708 96.708 96.708 96.709-43.383 96.709-96.708S156.033 6 102.708 6zm0 182.667c-47.397 0-85.958-38.561-85.958-85.958S55.311 16.75 102.708 16.75s85.958 38.561 85.958 85.958-38.561 85.959-85.958 85.959zm0-165.917c-44.089 0-79.958 35.869-79.958 79.958s35.869 79.958 79.958 79.958 79.958-35.869 79.958-79.958-35.869-79.958-79.958-79.958zm0 154.458a3 3 0 0 1-3-3v-6.667a3 3 0 1 1 6 0v6.667a3 3 0 0 1-3 3zm0-61.999c-6.893 0-12.5-5.607-12.5-12.5 0-4.301 2.183-8.102 5.5-10.352V35.479c0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7v56.878a12.62 12.62 0 0 1 3.352 3.352h30.253c3.859 0 7 3.14 7 7s-3.141 7-7 7H113.06c-2.25 3.316-6.051 5.5-10.352 5.5zm0-19c-3.584 0-6.5 2.916-6.5 6.5s2.916 6.5 6.5 6.5 6.5-2.916 6.5-6.5-2.916-6.5-6.5-6.5zm12.5 7.5h28.104a1.001 1.001 0 0 0 0-2h-28.104v2zm-13.5-13.5h2v-54.73a1.001 1.001 0 0 0-2 0v54.73zm72.519 16.283h-6.667a3 3 0 1 1 0-6h6.667a3 3 0 1 1 0 6zm-134.5 0H33.06a3 3 0 1 1 0-6h6.667a3 3 0 1 1 0 6z" />
+    </symbol>
+    <symbol id="check-mark-square-button" viewBox="0 0 455.2 455.2">
+      <path d="M0 0v455.2h455.2V0H0zm33.522 421.678V33.522h388.156v388.156H33.522z" />
+      <path d="M183.771 282.037l-76.929-76.912-22.386 22.434 99.315 99.299L394.033 116.58l-22.386-22.394z" />
+    </symbol>
+    <symbol id="checked" viewBox="0 0 538.261 538.261">
+      <path d="M269.13 0C120.87 0 .33 120.688.33 269.13s120.54 269.13 268.8 269.13 268.8-120.688 268.8-269.13S417.39 0 269.13 0M145.65 262.402l12.18-12.195c1.68-1.682 3.78-2.523 5.88-2.523s4.2.841 5.88 2.523l73.92 74.011c1.68 1.682 4.2 1.682 5.88 0L369.51 203.95c2.94-2.944 8.4-2.944 11.76 0l12.18 12.195c1.68 1.682 2.52 3.785 2.52 5.887 0 2.103-.84 4.205-2.52 5.887L251.91 368.793c-2.94 2.944-8.4 2.944-11.76 0l-94.5-94.616c-1.68-1.682-2.52-3.785-2.52-5.887 0-2.103.84-4.206 2.52-5.888" />
+    </symbol>
+    <symbol id="circular-graphic-of-three-parts" viewBox="0 0 611.99 611.99">
+      <path d="M268.999 610.757c-2.154 0-4.278-.234-6.341-.709-71.797-9.961-138.529-46.082-187.048-101.537C26.848 452.72 0 381.245 0 307.233c0-19.932 1.941-39.883 5.774-59.309a304.289 304.289 0 0 1 17.201-56.983c4.419-10.75 14.785-17.707 26.394-17.707 3.721 0 7.372.728 10.84 2.154a26.862 26.862 0 0 1 4.723 2.468l218.285 126.03c8.383 4.773 13.793 13.621 14.279 23.308.071.455.101.922.101 1.396v253.578c.01 15.765-12.823 28.589-28.598 28.589zM49.378 193.459a8.308 8.308 0 0 0-7.695 5.177c-7.099 17.211-12.499 35.11-16.059 53.201a286.701 286.701 0 0 0-5.4 55.396c0 69.117 25.079 135.869 70.615 187.969 45.313 51.795 107.626 85.529 175.47 94.984 1.436.283 2.063.355 2.69.355 4.621 0 8.373-3.752 8.373-8.373V329.673a9.082 9.082 0 0 1-.061-1.062c-.01-2.982-1.598-5.723-4.146-7.18L54.313 195.057c-.9-.577-1.325-.769-1.76-.961a8.342 8.342 0 0 0-3.175-.637zm293.623 417.257c-14.289 0-26.464-10.689-28.324-24.867a26.656 26.656 0 0 1-.202-2.295 9.04 9.04 0 0 1-.102-1.396V328.581c0-11.014 6.148-20.873 16.068-25.727l217.851-125.788a28.625 28.625 0 0 1 14.299-3.853c10.163 0 19.639 5.46 24.735 14.258a31.366 31.366 0 0 1 2.153 4.622c7.302 17.858 12.964 36.758 16.716 55.81a307.73 307.73 0 0 1 5.795 59.329c0 74.023-26.858 145.506-75.631 201.277-48.943 55.941-116.292 92.152-189.657 101.963a27.374 27.374 0 0 1-3.701.244zm-8.403-29.651c.041.365.061.729.061 1.092 0 .385.041.75.081 1.145.587 4.408 4.753 7.746 9.354 7.107 68.441-9.141 131.34-42.967 177.048-95.217 45.556-52.09 70.635-118.842 70.635-187.969 0-18.546-1.83-37.194-5.42-55.416-3.499-17.788-8.788-35.424-15.735-52.433a13.23 13.23 0 0 0-.859-1.901c-2.124-3.641-7.423-5.167-11.336-2.902l-218.48 126.121c-3.539 1.76-5.35 4.662-5.35 7.889v252.484zM306.01 293.086a28.667 28.667 0 0 1-14.643-4.025L72.111 162.465c-6.604-3.822-11.326-9.981-13.288-17.353-1.962-7.382-.951-15.067 2.882-21.681a28.291 28.291 0 0 1 2.983-4.197c28.092-36.182 65.093-66.327 106.614-86.733C213.542 11.75 258.866 1.233 306 1.233c47.113 0 92.438 10.517 134.666 31.277 41.765 20.508 78.938 50.865 107.494 87.806 9.598 12.469 7.291 30.418-5.127 40.035a37.532 37.532 0 0 1-2.982 2.002l-219.772 126.89a28.508 28.508 0 0 1-14.269 3.843zM306 21.458c-44.019 0-86.329 9.83-125.788 29.205-38.791 19.072-73.335 47.215-99.9 81.404-.637.759-.9 1.133-1.133 1.537a8.294 8.294 0 0 0-.819 6.3 8.254 8.254 0 0 0 3.873 5.056L301.59 271.607c2.791 1.668 5.937 1.638 8.556.142l219.6-126.799c.212-.131.647-.404 1.052-.708 3.479-2.7 4.146-7.938 1.354-11.568-26.676-34.483-61.382-62.848-100.396-82.001C392.309 31.288 349.999 21.458 306 21.458z" />
+    </symbol>
+    <symbol id="map-marker-variant-tool" viewBox="0 0 485.213 485.212">
+      <path d="M394.235 424.559c0 52.775-95.008 60.653-151.629 60.653-56.624 0-151.629-7.878-151.629-60.653 0-39.385 52.967-53.778 103.371-58.516l8.573 30c-47.398 4.116-81.618 15.252-81.618 28.516 0 16.765 54.313 30.327 121.302 30.327 67.015 0 121.302-13.562 121.302-30.327 0-13.264-34.205-24.399-81.617-28.516l8.587-30c50.405 4.738 103.358 19.131 103.358 58.516zm-96.249-193.856l-55.38 193.856-56.787-198.743c-36.146-21-60.728-59.704-60.728-104.512C125.092 54.315 179.409 0 246.396 0c66.99 0 121.302 54.315 121.302 121.304 0 48.451-28.609 89.97-69.712 109.399zm5.269-109.399c0-33.493-27.153-60.653-60.648-60.653-33.496 0-60.651 27.16-60.651 60.653 0 33.496 27.156 60.651 60.651 60.651 33.495 0 60.648-27.155 60.648-60.651z" />
+    </symbol>
+    <symbol id="mouse" viewBox="0 0 512 512">
+      <path d="M401.067 0v55.467c0 7.057-5.743 12.8-12.8 12.8H243.2c-21.171 0-38.4 17.229-38.4 38.4v47.369c-66.603 4.42-119.467 59.87-119.467 127.565V384c0 70.579 57.421 128 128 128s128-57.421 128-128V281.6c0-64.777-48.41-118.34-110.933-126.729v-48.205c0-7.057 5.743-12.8 12.8-12.8h145.067c21.171 0 38.4-17.229 38.4-38.4V0h-25.6zM204.8 179.627V281.6h-93.867c0-53.675 41.319-97.621 93.867-101.973zM315.733 384c0 56.55-45.85 102.4-102.4 102.4-56.55 0-102.4-45.85-102.4-102.4v-76.8h204.8V384zm0-102.4H230.4V180.736c48.41 8.141 85.333 50.142 85.333 100.864z" />
+    </symbol>
+    <symbol id="scroll-down-arrow" viewBox="0 0 27.496 27.496">
+      <path d="M27.496 13.747c0-7.591-6.154-13.746-13.748-13.746C6.156.001 0 6.156 0 13.747c0 7.595 6.156 13.748 13.748 13.748 7.594 0 13.748-6.153 13.748-13.748zm-14.039 8.745L5.485 10.009a.38.38 0 0 1-.082-.232l.036-.166a.376.376 0 0 1 .337-.212h15.942a.378.378 0 0 1 .298.609l-7.972 12.483a.38.38 0 0 1-.295.146.375.375 0 0 1-.292-.145z" />
+    </symbol>
+    <symbol id="social-facebook-circular-button" viewBox="0 0 512 512">
+      <path d="M256 0C114.609 0 0 114.609 0 256c0 141.391 114.609 256 256 256 141.391 0 256-114.609 256-256C512 114.609 397.391 0 256 0zm0 472c-119.297 0-216-96.703-216-216S136.703 40 256 40s216 96.703 216 216-96.703 216-216 216z" />
+      <path d="M316.75 216.812h-44.531v-32.5c0-9.969 10.312-12.281 15.125-12.281h28.767v-43.859l-32.97-.172c-44.983 0-55.25 32.703-55.25 53.672v35.141H195.25V262h32.641v122h44.328V262h37.656l6.875-45.188z" />
+    </symbol>
+    <symbol id="social-instagram-circular-button" viewBox="0 0 24 24">
+      <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.615 6h-9.23C6.619 6 6 6.62 6 7.384v9.23C6 17.38 6.619 18 7.385 18h9.23c.766 0 1.385-.62 1.385-1.385v-9.23C18 6.62 17.381 6 16.615 6zM12 9.693a2.308 2.308 0 1 1 .002 4.616A2.308 2.308 0 0 1 12 9.693zm4.5 6.346a.461.461 0 0 1-.461.461H7.961a.462.462 0 0 1-.461-.461V11h.949a3.708 3.708 0 0 0-.14 1 3.691 3.691 0 1 0 7.382 0c0-.174-.015-.346-.039-.514A3.708 3.708 0 0 0 15.55 11h.95v5.039zm0-6.991a.462.462 0 0 1-.461.462h-1.088a.461.461 0 0 1-.461-.462V7.961a.46.46 0 0 1 .461-.461h1.088c.254 0 .461.207.461.461v1.087z" />
+    </symbol>
+    <symbol id="social-twitter-circular-button" viewBox="0 0 512 512">
+      <path d="M256 0C114.609 0 0 114.609 0 256c0 141.392 114.609 256 256 256 141.392 0 256-114.608 256-256C512 114.609 397.392 0 256 0zm0 472c-119.297 0-216-96.702-216-216 0-119.297 96.703-216 216-216 119.298 0 216 96.703 216 216 0 119.298-96.702 216-216 216z" />
+      <path d="M384 170.922c-4.312 2.562-17.248 7.671-29.312 8.953 7.735-4.491 19.188-19.203 22.016-30.89-7.436 5.109-24.516 12.562-32.95 12.562 0 0 0 .023.016.039C334.141 150.75 320.608 144 305.577 144c-29.154 0-52.81 25.461-52.81 56.875 0 4.36.481 8.595 1.357 12.672h-.017c-39.562-1.094-85.811-22.446-111.874-59-16 29.852-2.156 63.046 16.015 75.141-6.203.516-17.671-.766-23.061-6.407-.375 19.797 8.484 46.048 40.735 55.562-6.221 3.61-17.19 2.579-21.984 1.781 1.687 16.75 23.437 38.623 47.202 38.623-8.47 10.534-37.373 29.706-73.141 23.596C152.298 358.782 180.625 368 210.608 368c85.205 0 151.376-74.359 147.814-166.093 0-.11-.031-.219-.031-.313 0-.25.031-.5.031-.719 0-.281-.031-.562-.031-.859 7.75-5.688 18.155-15.782 25.609-29.094z" />
+    </symbol>
+    <symbol id="squares" viewBox="0 0 96.666 96.666">
+      <path d="M60.666 6H36v24.666h24.666V6zm-4 20.666H40V10h16.666v16.666zM36 90.666h24.666V66H36v24.666zM40 70h16.666v16.666H40V70zM0 90.666h24.666V66H0v24.666zM4 70h16.666v16.666H4V70zm68-4v24.666h24.666V66H72zm20.666 20.666H76V70h16.666v16.666zm-77.356-23.6h-4.454V46.4h1.478v-.067h33.499V35h5v11.333h33.501v.067h2.227v16.667h-4.455V51.333H50.833v11.333h-5V51.333H15.31v11.733z" />
+    </symbol>
+  </svg>
+  <header class="page-header ">
+    <div class="container page-header__content-wrapper">
+      <div class="row X--between X--middle">
+        <div class="X5 S4 L2">
+          <div class="sitelogo">
+            <a href="#"><img src="img/rasterImages/sitelogo.png" alt="Spacefolff logo"></a>
+          </div>
+        </div>
+        <div class="X2 mobmenu-btn-wrap pos-r">
+          <button type="button" class="mobmenu-btn btn" id="js-mobbtn">
+            <span>&nbsp;</span>
+          </button>
+        </div>
+        <div class="X12 L9 menu-fixed-wrapper">
+          <div class="menu">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">About</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Marketplace</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="pipeline"></div>
+            <ul class="auth">
+              <li class="auth__item"><a class="auth__link" href="#">Log in</a></li>
+              <li class="auth__item"><a class="auth__link auth__link--signUp" href="#">Sign up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row page-header__custom-position">
+        <div class="X12">
+          <section class="page-header__main-heading">
+            <h1 class="index-headnig">Crowdsourced ad space</h1>
+            <small class="index-headnig-descr">A peer-to-peer advertising platform</small>
+            <a class="call-to-action-link" href="#">start selling, now</a>
+          </section>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-btn" href="#" title="scrollDownButton">
+      <svg class="svg-ic svg-ic--scrollDownBtn">
+        <use xlink:href="#scroll-down-arrow"></use>
+      </svg>
+    </a>
+  </header>
+  <div class="wrapper">
+    <main class="main-content">
+      <section class="why-we">
+        <div class="container">
+          <div class="row X--center">
+            <div class="X12">
+              <h2 class="why-we__heading section-heading">Why spacewolff</h2>
+            </div>
+            <div class="X12 M4 why-we__item">
+              <div class="why-we__icon">
+                <svg class="svg-ic svg-ic--mouse">
+                  <use xlink:href="#mouse"></use>
+                </svg>
+              </div>
+              <h3 class="why-we__block-heading">Easy to use</h3>
+              <p class="why-we__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+            <div class="X12 M4 why-we__item">
+              <div class="why-we__icon">
+                <svg class="svg-ic svg-ic--clock">
+                  <use xlink:href="#big-wall-clock"></use>
+                </svg>
+              </div>
+              <h3 class="why-we__block-heading">Save your time</h3>
+              <p class="why-we__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+            <div class="X12 M4 why-we__item">
+              <div class="why-we__icon">
+                <svg class="svg-ic svg-ic--parts">
+                  <use xlink:href="#circular-graphic-of-three-parts"></use>
+                </svg>
+              </div>
+              <h3 class="why-we__block-heading">Effective</h3>
+              <p class="why-we__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advertising">
+        <div class="container">
+          <div class="row X--center">
+            <div class="X12">
+              <h2 class="advertising__heading section-heading">We make advertising simple</h2>
+            </div>
+            <div class="X12 M6 M--order2 advertising__descr">
+              <p>Find ad space that reaches your targeted audience and place ads directly through the site. Monetize your space by selling it to the advertisers on the site.</p>
+              <p>View your user dashboard to see how much you’ve earned and how much you’ve spent.</p>
+              <div class="advertising__btn-wrap">
+                <a class="advertising__getStarted-btn" href="#">Get started</a>
+              </div>
+            </div>
+            <div class="X12 M6 M--order1 advertising__bigImg">
+              <img src="img/rasterImages/site-screenshot.png" alt="site screenshot">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="presentation">
+        <div class="fullWidthContainer">
+          <div class="row">
+            <div class="M6 presentation__part">
+              <h2 class="presentation__heading">
+              Sell your excess space to advertisers
+            </h2>
+              <p class="presentation__descr">
+                Donec eu egestas massa. Pellentesque viverra viverra tellus, non tempor libero lobortis vel. Mauris nec sollicitudin velit. Nam dui nibh, consequat sed dolor non, commodo consequat felis. Maecenas aliquet arcu id mattis vestibulum. Donec in lacus pulvinar, posuere magna ac, tempor quam. Aenean iaculis mi ac sapien.
+              </p>
+              <ul class="advantages">
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="M6 presentation__part">
+            </div>
+            <div class="M6 presentation__part">
+            </div>
+            <div class="M6 presentation__part">
+              <h3 class="presentation__heading">
+              Place Ads Directly Through Spacewolff
+            </h3>
+              <p class="presentation__descr">
+                Donec eu egestas massa. Pellentesque viverra viverra tellus, non tempor libero lobortis vel. Mauris nec sollicitudin velit. Nam dui nibh, consequat sed dolor non, commodo consequat felis. Maecenas aliquet arcu id mattis vestibulum. Donec in lacus pulvinar, posuere magna ac, tempor quam. Aenean iaculis mi ac sapien.
+              </p>
+              <ul class="advantages">
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon">
+                    <svg class="svg-ic svg-ic--checked">
+                      <use xlink:href="#checked"></use>
+                    </svg>
+                  </div>
+                  <span class="advantages__text">Lorem ipsum dolor sit amet, consectetur.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-it-works">
+        <div class="container">
+          <div class="row X--center">
+            <div class="X12">
+              <h3 class="how-it-works__heading section-heading">
+              How it works
+            </h3>
+              <small class="how-it-works__heading-descr">
+              Our marketplace connects advertisers and sellers of ad space directly.
+            </small>
+            </div>
+            <div class="X12 M3 how-it-works__item">
+              <div class="how-it-works__icon">
+                <svg class="svg-ic svg-ic--add-user">
+                  <use xlink:href="#add-user"></use>
+                </svg>
+              </div>
+              <h3 class="how-it-works__block-heading">Create an Account</h3>
+              <p class="how-it-works__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
+            </div>
+            <div class="X12 M3 how-it-works__item">
+              <div class="how-it-works__icon">
+                <svg class="svg-ic svg-ic--map-marker">
+                  <use xlink:href="#map-marker-variant-tool"></use>
+                </svg>
+              </div>
+              <h3 class="how-it-works__block-heading">Search For Ad Space</h3>
+              <p class="how-it-works__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
+            </div>
+            <div class="X12 M3 how-it-works__item">
+              <div class="how-it-works__icon">
+                <svg class="svg-ic svg-ic--check-mark">
+                  <use xlink:href="#check-mark-square-button"></use>
+                </svg>
+              </div>
+              <h3 class="how-it-works__block-heading">Apply For Ad Space</h3>
+              <p class="how-it-works__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
+            </div>
+            <div class="X12 M3 how-it-works__item">
+              <div class="how-it-works__icon">
+                <svg class="svg-ic svg-ic--squares">
+                  <use xlink:href="#squares"></use>
+                </svg>
+              </div>
+              <h3 class="how-it-works__block-heading">Your Ad is Placed</h3>
+              <p class="how-it-works__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="description">
+        <div class="container description__content">
+          <div class="row X--center M--stretch">
+            <div class="X12 M4 description__part">
+              <h3 class="description__heading">Advertise with spacewolff</h3>
+            </div>
+            <div class="X12 M5 description__part">
+              <p class="description__text">Put your ad on Spacewolff’s homepage, in Spacewolff’s emails, and on Spacewolff’s blog.</p>
+            </div>
+            <div class="X12 M3 description__part">
+              <a href="#" class="description__btn">View our listings</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="X12 M5">
+          <div class="about-us">
+            <h4 class="about-us__heading">About us</h4>
+            <p class="about-us__text">
+              Spacewolff is an online marketplace connecting advertisers and owners of ad space. Small and large businesses, individuals, publishers, and content creators can create and sell space across multiple channels. Advertisers and can easily search and sort ad space to identify channels that reach their specific target market and place ads directly through the site. Spacewolff was founded in 2016 and is based in Miami, Florida.
+            </p>
+          </div>
+        </div>
+        <div class="X6 S4  M2">
+          <nav class="sitenav">
+            <h4 class="sitenav__heading">Spacewolff</h4>
+            <ul class="sitenav__list">
+              <li class="sitenav__item">
+                <a href="#" class="sitenav__link">Marketplace</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#" class="sitenav__link">About Company</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#" class="sitenav__link">FAQs</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#" class="sitenav__link">Blog</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#" class="sitenav__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="X6 S4  M3">
+          <div class="legal">
+            <h4 class="legal__heading">Legal</h4>
+            <ul class="legal__list">
+              <li class="legal__item">
+                <a href="#" class="li legal__link">Privacy Policy</a>
+              </li>
+              <li class="legal__item">
+                <a href="#" class="li legal__link">Terms of Use</a>
+              </li>
+              <li class="legal__item">
+                <a href="#" class="li legal__link">Payment and Refund Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="X12 S4 M2">
+          <div class="social">
+            <h4 class="social__heading">Social</h4>
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="svg-ic svg-ic--fb">
+                    <use xlink:href="#social-facebook-circular-button"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="svg-ic svg-ic--tw">
+                    <use xlink:href="#social-twitter-circular-button"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="svg-ic svg-ic--inst">
+                    <use xlink:href="#social-instagram-circular-button"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="X12 copyright">
+          <p class="copyright__text">&copy; 2017 Copyright - Spacewollf, LLC.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="my-modal-overlay"></div>
+  <script src='js/main.min.js'></script>
+</body>
+
+</html>
