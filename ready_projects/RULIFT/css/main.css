@@ -1259,11 +1259,11 @@ line-height: 19px!important;
 
 #popupWindow .close {
   position: absolute;
-  right: 30px;
-  top: 19px;
+  right: 8px;
+  top: 8px;
   cursor: pointer;
   color: #636363;
-  font: normal 16px/14px "Open Sans", sans-serif;
+  font: normal 30px/.5 "Open Sans", sans-serif;
 }
 
 #popupWindow input[type="text"] {
@@ -1572,7 +1572,7 @@ header {
 }
 
 .wrappercenter {
-  min-width: 320px;
+  min-width: 229px;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -1657,7 +1657,7 @@ header {
 .deviz {
   background-color: #ff5a3f;
   height: 160px;
-  min-width: 320px;
+  min-width: 299px;
   max-width: 1920px;
 }
 
@@ -1679,7 +1679,6 @@ p.devizfirstp {
 }
 
 .block1 {
-  height: 437px;
   max-width: 1920px;
   background: url(../pics/strelkabig.png) repeat-x;
   -webkit-box-shadow: 0px 1px 26px 1px black inset;
@@ -1998,7 +1997,7 @@ p.devizfirstp {
   background: #ff6a52;
   width: 100%;
   height: 60px;
-  z-index: 9999;
+  z-index: 9480;
   max-width: 1920px;
   -webkit-box-shadow: 0 2px 3px #AFAFAF;
           box-shadow: 0 2px 3px #AFAFAF;
@@ -2042,7 +2041,6 @@ p.devizfirstp {
 
 #rabotasnamy {
   width: 100%;
-  height: 370px;
   background-color: #fff;
 }
 
@@ -2371,7 +2369,7 @@ span.orange {
 
 .usluga1 {
   width: 440px;
-  height: 608px;
+  height: 665px;
   background: #fff;
   margin-left: 80px;
   float: left;
@@ -2536,7 +2534,6 @@ img.fotousluga1 {
 .strelka {
   background: url(../pics/relama.png) repeat-y -50% 94%;
   width: 100%;
-  height: 630px;
   /* background-position-y: 114%; */
   /* padding-top: 17px; */
   /* margin-top: 10px; */
@@ -2789,7 +2786,6 @@ img.hundai {
 
 #otzivi {
   width: 100%;
-  height: 575px;
   background: #fff;
   padding-bottom: 80px;
 }
@@ -3086,7 +3082,6 @@ p.name span.prof {
 
 footer {
   background: #0b4b59;
-  height: 130px;
   width: 100%;
 }
 
@@ -3229,10 +3224,26 @@ footer {
 #popupWindow {
   width: 300px !important;
   margin-left: -150px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
 }
 
 #popupWindow form {
   border-right: none !important;
+  float: none;
+  background-image: none;
+  width: initial;
+  margin: 0;
+  padding: 0;
+}
+
+div.pp_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9500;
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -3339,6 +3350,8 @@ footer {
   .otziv {
     width: 495px;
     margin-left: 0;
+    height: initial;
+    min-height: 100px;
   }
   .otzivtext {
     margin-left: 2px;
@@ -3348,6 +3361,71 @@ footer {
   }
   .footercontact {
     margin-left: 100px;
+  }
+  footer {
+    height: initial;
+  }
+  .formafooter {
+    margin-top: 0;
+    width: 320px;
+    float: none;
+    padding: 20px;
+    top: 62px;
+    right: 60px;
+  }
+  .formafooter * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .formafooter form input {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    height: 48px;
+  }
+  .formafooter form input.otpr {
+    width: 140px;
+    height: 55px;
+    font-size: 22px;
+  }
+  .formafooter .formalooc {
+    margin-right: 12px;
+  }
+  .mapspointer {
+    background-size: cover;
+    height: 349px;
+    width: 424px;
+    top: 60px;
+    left: 60px;
+  }
+  .mapstext {
+    padding-top: 80px;
+    margin-left: 33px;
+    width: 310px;
+  }
+  .mapstext p {
+    font-size: 15px;
+  }
+  .mapstext p.calibri {
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  #menu {
+    height: initial;
+  }
+  #menu ul {
+    width: 100%;
+    height: initial;
+  }
+  #menu li {
+    line-height: initial;
+  }
+  #menu li:hover {
+    background-color: #f73616;
+  }
+  #menu li a {
+    padding: 10px 20px;
   }
 }
 
@@ -3552,37 +3630,77 @@ footer {
     float: left;
     width: 60%;
   }
+  .usluga2blocktext {
+    margin-top: 55px;
+  }
+  .usluga2blocktext ul:before, .usluga2blocktext ul:after {
+    content: "";
+    display: table;
+  }
+  .usluga2blocktext ul:after {
+    clear: both;
+  }
   .poluchit {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
   }
-  .asus {
-    margin-right: 44px;
+  .blockpartner {
+    width: 100%;
+    text-align: center;
+  }
+  .blockpartner * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .petro, .makita, .alcat, .moto, .luko, .asus, .parma {
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-size: cover;
+    vertical-align: middle;
   }
   .luko {
-    margin-right: 74px;
+    margin: 0 70px;
+    width: 206px;
   }
-  .moto {
-    margin-right: 77px;
-  }
-  .alcat {
-    margin-left: 75px;
+  .parma {
+    width: 197px;
+    height: 118px;
+    margin-bottom: 20px;
   }
   .makita {
-    margin-left: 125px;
+    margin: 0 100px;
   }
-  .petro {
-    margin-left: 152px;
+  #rabotasnamy {
+    height: initial;
+  }
+  .blocknad {
+    width: 100%;
+    text-align: center;
   }
   .blocknad .ten {
     margin-left: 0;
   }
-  .blocknad .ten, .blocknad .car, .blocknad .men, .blocknad .garanty {
+  .blocknad .ten, .blocknad .car, .blocknad .men, .blocknad .garanty, .blocknad .time {
     margin-right: 13px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    height: initial;
+    margin-bottom: 10px;
+  }
+  .blocknad .ten img, .blocknad .car img, .blocknad .men img, .blocknad .garanty img, .blocknad .time img {
+    margin-left: 0;
+  }
+  .blocknad .men, .blocknad .time {
+    margin-right: 0;
+  }
+  #snaminadeshno {
+    height: initial;
   }
   .slider {
-    width: 958px;
+    width: 630px;
     padding: 0;
   }
   .slide-item {
@@ -3592,17 +3710,1110 @@ footer {
     width: 300px;
     height: 216px;
   }
-  .otziv {
-    width: 495px;
-    margin-left: 0;
+  #otzivi {
+    height: initial;
   }
-  .otzivtext {
-    margin-left: 2px;
+  .otziv {
+    width: 100%;
+    margin-left: 0;
+    height: initial;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .otzivtext, .otzivtext4 {
+    margin-left: 15px;
+    max-width: 550px;
+    width: initial;
   }
   .footercenterblock {
     margin-left: 30px;
   }
   .footercontact {
     margin-left: 100px;
+  }
+  .formafooter {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 351px;
+    margin-top: 0;
+    width: 100%;
+    float: none;
+    padding: 20px 60px;
+    top: 100%;
+    right: 0;
+    left: 0;
+  }
+  .formafooter * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .formafooter p {
+    font-size: 22px;
+  }
+  .formafooter form input {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    height: 48px;
+  }
+  .formafooter form input.otpr {
+    width: 140px;
+    height: 55px;
+    font-size: 22px;
+  }
+  .formafooter .formalooc {
+    margin-right: 12px;
+  }
+  .mapspointer {
+    background-size: cover;
+    height: 349px;
+    width: 424px;
+    top: 60px;
+    left: 60px;
+  }
+  footer {
+    height: initial;
+    margin-top: 351px;
+  }
+  .mapstext {
+    padding-top: 80px;
+    margin-left: 33px;
+    width: 310px;
+  }
+  .mapstext p {
+    font-size: 15px;
+  }
+  .mapstext p.calibri {
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .footercenterblock {
+    letter-spacing: 1px;
+  }
+  #menu {
+    height: initial;
+  }
+  #menu ul {
+    width: 100%;
+    height: initial;
+  }
+  #menu li:hover {
+    background-color: #f73616;
+  }
+  #menu li a {
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .wrappercenter {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  header {
+    min-height: 150px;
+    height: 280px;
+    background-repeat: repeat;
+  }
+  header > .wrappercenter > a {
+    width: 120px;
+    height: 117px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  header > .wrappercenter > a:before, header > .wrappercenter > a:after {
+    content: "";
+    display: table;
+  }
+  header > .wrappercenter > a:after {
+    clear: both;
+  }
+  .logo {
+    width: inherit;
+    height: inherit;
+    margin-top: 0px;
+  }
+  .headercenterblock {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 180px;
+    height: initial;
+    margin-left: 0;
+    background-position: center;
+  }
+  .headercenterblock p {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .zvonok {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 13px;
+  }
+  .headercontact {
+    width: 169px;
+    margin-right: 0;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .headercontact p {
+    font-size: 20px;
+    margin-top: 14px;
+    line-height: 1;
+  }
+  .headercontact p.mail {
+    font-size: 17px;
+  }
+  .deviz {
+    height: initial;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .deviz p {
+    font-size: 16px;
+  }
+  .block1 {
+    height: initial;
+    background-repeat: repeat;
+  }
+  p.devizfirstp {
+    padding-top: 0px;
+  }
+  .imageslid {
+    width: 440px;
+    float: none;
+    display: block;
+  }
+  .opisslaider {
+    display: block;
+    margin-top: 30px;
+    width: 55%;
+    height: initial;
+    font-size: 22px;
+  }
+  .anythingSlider {
+    width: 100%;
+    height: 100%;
+  }
+  .anythingSlider .wrapper {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+  }
+  .anythingSlider .wrapper ul {
+    height: 100%;
+  }
+  .forma {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .forma > p {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .forma * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .forma form input {
+    width: 100%;
+  }
+  .forma form p {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .formalooc {
+    width: 184px;
+  }
+  .formalooc img {
+    margin-top: 3px;
+  }
+  .slaider {
+    float: none;
+    height: 480px;
+    width: 442px;
+    margin: 40px auto 0;
+  }
+  .anythingSlider ul li {
+    height: 100%;
+  }
+  .firma {
+    width: 106px;
+    height: 107px;
+    margin: 0;
+  }
+  #reklama1 {
+    min-height: 570px;
+  }
+  .titlereklama {
+    font-size: 20px;
+  }
+  p.bigtitle {
+    font-size: 22px;
+  }
+  .littletitle {
+    padding: 0 30px;
+    margin-top: 10px;
+  }
+  .poluchitreklama {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 480px;
+  }
+  .strelka {
+    min-height: inherit;
+    height: initial;
+    padding-bottom: 20px;
+  }
+  .titletext {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: initial;
+    width: 100%;
+    background-position: left 180px center;
+    background-image: none;
+  }
+  .titleuslugi {
+    padding-top: 25px;
+  }
+  .usluga3 {
+    margin-left: 0;
+  }
+  .usluga2 {
+    margin-top: 15px;
+  }
+  .usluga1, .usluga2, .usluga3, .usluga4 {
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px;
+    height: initial;
+    width: 100%;
+    display: block;
+    float: none;
+    margin-top: 0;
+  }
+  .usluga1:before, .usluga1:after, .usluga2:before, .usluga2:after, .usluga3:before, .usluga3:after, .usluga4:before, .usluga4:after {
+    content: "";
+    display: table;
+  }
+  .usluga1:after, .usluga2:after, .usluga3:after, .usluga4:after {
+    clear: both;
+  }
+  .listusluga, .zaglist, .uslugablocktitle {
+    float: left;
+  }
+  .listusluga {
+    width: 50%;
+  }
+  .uslugablocktitle {
+    font-size: 18px;
+    width: 100%;
+  }
+  .uslugablocktitle p {
+    display: inline-block;
+  }
+  .zaglist {
+    font-size: 16px;
+    width: 50%;
+  }
+  ul.listusluga li {
+    font-size: 15px;
+  }
+  .usluga2blocktext ul li {
+    float: left;
+    width: 44%;
+    min-height: 125px;
+  }
+  .blockuslugi,
+  .blockuslugi2 {
+    background-image: none;
+  }
+  img.fotousluga1 {
+    height: 191px;
+    width: 247px;
+    margin-top: 22px;
+    display: inline-block;
+  }
+  .usluga2blocktext {
+    margin-top: 55px;
+  }
+  .usluga2blocktext ul:before, .usluga2blocktext ul:after {
+    content: "";
+    display: table;
+  }
+  .usluga2blocktext ul:after {
+    clear: both;
+  }
+  .poluchit {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .blockpartner {
+    width: 100%;
+    text-align: center;
+  }
+  .blockpartner * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .title {
+    width: 100%;
+  }
+  .petro, .makita, .alcat, .moto, .luko, .asus, .parma {
+    display: inline-block;
+    margin: 0 50px;
+    float: none;
+    background-size: cover;
+    vertical-align: top;
+    margin-bottom: 30px;
+  }
+  .luko {
+    width: 206px;
+  }
+  .parma {
+    width: 197px;
+    height: 118px;
+  }
+  .asus {
+    margin-bottom: 50px;
+  }
+  #rabotasnamy {
+    height: initial;
+  }
+  .blocknad {
+    width: 100%;
+    text-align: center;
+  }
+  .blocknad .ten {
+    margin-left: 0;
+  }
+  .blocknad .ten, .blocknad .car, .blocknad .men, .blocknad .garanty, .blocknad .time {
+    margin-right: 3px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    height: initial;
+    margin-bottom: 10px;
+  }
+  .blocknad .ten img, .blocknad .car img, .blocknad .men img, .blocknad .garanty img, .blocknad .time img {
+    margin-left: 0;
+  }
+  .titletext, .title, .titlefotoobject, .titlefotootziv {
+    font-size: 24px;
+  }
+  #snaminadeshno {
+    height: initial;
+  }
+  .slider {
+    width: 318px;
+    padding: 0;
+  }
+  .slide-item {
+    width: 300px;
+  }
+  .slide-item img {
+    width: 300px;
+    height: 216px;
+  }
+  #otzivi {
+    height: initial;
+  }
+  .otziv {
+    width: 100%;
+    margin-left: 0;
+    height: initial;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .otzivtext, .otzivtext4 {
+    margin-left: 0px;
+    max-width: 100%;
+    width: 100%;
+  }
+  img.otzivfoto, img.otzivfoto2, img.otzivfoto3, img.otzivfoto4 {
+    display: inline-block;
+    float: none;
+    margin-bottom: 5px;
+  }
+  a.more {
+    width: 95px;
+  }
+  .footercenterblock {
+    margin-left: 30px;
+  }
+  .footercontact {
+    margin-left: 100px;
+  }
+  .formafooter {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 420px;
+    margin-top: 0;
+    width: 100%;
+    float: none;
+    padding: 20px 60px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .formafooter * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .formafooter p {
+    font-size: 22px;
+  }
+  .formafooter form input {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    height: 48px;
+  }
+  .formafooter form input.otpr {
+    width: 140px;
+    height: 55px;
+    font-size: 22px;
+  }
+  .formafooter .formalooc {
+    margin-right: 12px;
+  }
+  .mapspointer {
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 370px;
+    width: 230px;
+    top: 39px;
+    left: 45px;
+    padding: 15px;
+  }
+  .mapstext {
+    padding-top: 0px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .mapstext p {
+    font-size: 14px;
+  }
+  .mapstext p.calibri {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  footer {
+    height: initial;
+    margin-top: 380px;
+    position: relative;
+    z-index: 2;
+    height: 270px;
+  }
+  footer > .wrappercenter > a {
+    width: 150px;
+    height: 125px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  footer > .wrappercenter > a:before, footer > .wrappercenter > a:after {
+    content: "";
+    display: table;
+  }
+  footer > .wrappercenter > a:after {
+    clear: both;
+  }
+  .logofooter {
+    width: inherit;
+    height: inherit;
+    margin-top: 0;
+  }
+  .footercontact {
+    margin-left: 0;
+    margin-top: 0;
+    float: none;
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    width: 168px;
+  }
+  .autor {
+    right: 10px;
+  }
+  .footercenterblock {
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 150px;
+    max-width: 250px;
+    width: initial;
+    height: initial;
+    letter-spacing: 1px;
+  }
+  #menu {
+    height: initial;
+  }
+  #menu ul {
+    width: 100%;
+    height: initial;
+    text-align: center;
+  }
+  #menu li {
+    line-height: initial;
+    float: none;
+    display: inline-block;
+  }
+  #menu li:hover {
+    background-color: #f73616;
+  }
+  #menu li a {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .wrappercenter {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  header {
+    min-height: 150px;
+    height: 280px;
+    background-repeat: repeat;
+  }
+  header > .wrappercenter > a {
+    width: 120px;
+    height: 117px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  header > .wrappercenter > a:before, header > .wrappercenter > a:after {
+    content: "";
+    display: table;
+  }
+  header > .wrappercenter > a:after {
+    clear: both;
+  }
+  .logo {
+    width: inherit;
+    height: inherit;
+    margin-top: 0px;
+  }
+  .headercenterblock {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 180px;
+    height: initial;
+    margin-left: 0;
+    background-position: center;
+  }
+  .headercenterblock p {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .zvonok {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 13px;
+  }
+  .headercontact {
+    width: 169px;
+    margin-right: 0;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .headercontact p {
+    font-size: 20px;
+    margin-top: 14px;
+    line-height: 1;
+  }
+  .headercontact p.mail {
+    font-size: 17px;
+  }
+  .deviz {
+    height: initial;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .deviz p {
+    font-size: 16px;
+  }
+  .block1 {
+    height: initial;
+    background-repeat: repeat;
+  }
+  .deviz p {
+    font-size: 14px;
+  }
+  p.devizfirstp {
+    padding-top: 0px;
+    font-size: 14px;
+  }
+  .imageslid {
+    width: 280px;
+    float: none;
+    display: block;
+  }
+  .opisslaider {
+    display: block;
+    margin-top: 30px;
+    width: 44%;
+    height: initial;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .opisslaider p {
+    padding-left: 0;
+  }
+  .anythingSlider {
+    width: 100%;
+    height: 100%;
+  }
+  .anythingSlider .wrapper {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+  }
+  .anythingSlider .wrapper ul {
+    height: 100%;
+  }
+  .forma {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .forma > p {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .forma * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .forma form input {
+    width: 100%;
+  }
+  .forma form p {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .forma form input.otpr {
+    width: 100%;
+  }
+  .formalooc {
+    display: none;
+  }
+  .slaider {
+    float: none;
+    height: 410px;
+    width: 290px;
+    margin: 40px auto 0;
+  }
+  .anythingSlider ul li {
+    height: 100%;
+  }
+  .firma {
+    width: 106px;
+    height: 107px;
+    margin: 0;
+  }
+  #reklama1 {
+    min-height: 570px;
+  }
+  .titlereklama {
+    font-size: 20px;
+    padding-top: 25px;
+  }
+  p.bigtitle {
+    font-size: 22px;
+  }
+  .littletitle {
+    padding: 0 30px;
+    margin-top: 10px;
+  }
+  .poluchitreklama {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 480px;
+  }
+  .strelka {
+    min-height: inherit;
+    height: initial;
+    padding-bottom: 20px;
+    background-position: top left;
+  }
+  .titletext {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: initial;
+    width: 100%;
+    background-position: left 180px center;
+    background-image: none;
+  }
+  .titleuslugi {
+    padding-top: 25px;
+  }
+  .usluga3 {
+    margin-left: 0;
+  }
+  .usluga2 {
+    margin-top: 15px;
+  }
+  .usluga1, .usluga2, .usluga3, .usluga4 {
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px;
+    height: initial;
+    width: 100%;
+    display: block;
+    float: none;
+    margin-top: 0;
+  }
+  .usluga1:before, .usluga1:after, .usluga2:before, .usluga2:after, .usluga3:before, .usluga3:after, .usluga4:before, .usluga4:after {
+    content: "";
+    display: table;
+  }
+  .usluga1:after, .usluga2:after, .usluga3:after, .usluga4:after {
+    clear: both;
+  }
+  .listusluga, .zaglist, .uslugablocktitle {
+    float: left;
+    width: 100%;
+  }
+  .uslugablocktitle {
+    font-size: 18px;
+  }
+  .uslugablocktitle p {
+    display: inline-block;
+  }
+  .zaglist {
+    font-size: 16px;
+  }
+  ul.listusluga li {
+    font-size: 15px;
+  }
+  .usluga2blocktext ul li {
+    float: left;
+    width: 100%;
+    min-height: 35px;
+    margin-bottom: 10px;
+  }
+  .blockuslugi,
+  .blockuslugi2 {
+    background-image: none;
+  }
+  img.fotousluga1 {
+    height: 191px;
+    width: 247px;
+    margin-top: 22px;
+    display: inline-block;
+  }
+  .usluga2blocktext {
+    margin-top: 55px;
+  }
+  .usluga2blocktext ul:before, .usluga2blocktext ul:after {
+    content: "";
+    display: table;
+  }
+  .usluga2blocktext ul:after {
+    clear: both;
+  }
+  .poluchit {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .blockpartner {
+    width: 100%;
+    text-align: center;
+  }
+  .blockpartner * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .title {
+    width: 100%;
+  }
+  .petro, .makita, .alcat, .moto, .luko, .asus, .parma {
+    display: inline-block;
+    margin: 0 40px;
+    float: none;
+    background-size: cover;
+    vertical-align: top;
+    margin-bottom: 30px;
+  }
+  .luko {
+    width: 206px;
+  }
+  .parma {
+    width: 197px;
+    height: 118px;
+  }
+  .asus {
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+  #rabotasnamy {
+    height: initial;
+  }
+  .blocknad {
+    width: 100%;
+    text-align: center;
+  }
+  .blocknad .ten {
+    margin-left: 0;
+  }
+  .blocknad .ten, .blocknad .car, .blocknad .men, .blocknad .garanty, .blocknad .time {
+    margin-right: 3px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    height: initial;
+    margin-bottom: 10px;
+  }
+  .blocknad .ten img, .blocknad .car img, .blocknad .men img, .blocknad .garanty img, .blocknad .time img {
+    margin-left: 0;
+  }
+  .titletext, .title, .titlefotoobject, .titlefotootziv {
+    font-size: 22px;
+  }
+  .titlefotootziv, .titlefotoobject {
+    width: 245px;
+  }
+  #snaminadeshno {
+    height: initial;
+  }
+  .slider {
+    width: 270px;
+    padding: 0;
+  }
+  .slide-item {
+    width: 270px;
+    padding: 0;
+    padding-top: 15px;
+  }
+  .slide-item img {
+    width: 270px;
+    height: initial;
+  }
+  #otzivi {
+    height: initial;
+  }
+  .otziv {
+    width: 100%;
+    margin-left: 0;
+    height: initial;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .otzivtext, .otzivtext4 {
+    margin-left: 0px;
+    max-width: 100%;
+    width: 100%;
+  }
+  img.otzivfoto, img.otzivfoto2, img.otzivfoto3, img.otzivfoto4 {
+    display: inline-block;
+    float: none;
+    margin-bottom: 5px;
+  }
+  a.more {
+    width: 95px;
+  }
+  .footercenterblock {
+    margin-left: 30px;
+  }
+  .footercontact {
+    margin-left: 100px;
+  }
+  .formafooter {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 420px;
+    margin-top: 0;
+    width: 100%;
+    float: none;
+    padding: 20px 10px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .formafooter * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .formafooter p {
+    font-size: 20px;
+  }
+  .formafooter form input {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    height: 48px;
+  }
+  .formafooter form input.otpr {
+    width: 100%;
+    height: 55px;
+    font-size: 22px;
+  }
+  .formafooter .formalooc {
+    display: none;
+  }
+  .mapspointer {
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 370px;
+    width: 230px;
+    top: 39px;
+    left: 45px;
+    padding: 15px;
+  }
+  .titleblock2 {
+    width: 100%;
+  }
+  .mapstext {
+    padding-top: 0px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .mapstext p {
+    font-size: 14px;
+  }
+  .mapstext p.calibri {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  footer {
+    height: initial;
+    margin-top: 380px;
+    position: relative;
+    z-index: 2;
+    height: 270px;
+  }
+  footer > .wrappercenter > a {
+    width: 150px;
+    height: 125px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  footer > .wrappercenter > a:before, footer > .wrappercenter > a:after {
+    content: "";
+    display: table;
+  }
+  footer > .wrappercenter > a:after {
+    clear: both;
+  }
+  .logofooter {
+    width: inherit;
+    height: inherit;
+    margin-top: 0;
+  }
+  .footercontact {
+    margin-left: 0;
+    margin-top: 0;
+    float: none;
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    width: 168px;
+  }
+  .footercontact p {
+    font-size: 20px;
+  }
+  .autor {
+    right: 10px;
+    width: 163px;
+  }
+  .footercenterblock {
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 150px;
+    max-width: 150px;
+    width: initial;
+    height: initial;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+  #menu {
+    height: initial;
+  }
+  #menu ul {
+    width: 100%;
+    height: initial;
+    text-align: left;
+  }
+  #menu li {
+    line-height: initial;
+    float: none;
+    display: inline-block;
+    width: 49%;
+  }
+  #menu li:nth-child(2n) {
+    text-align: right;
+  }
+  #menu li:hover {
+    background-color: #f73616;
+  }
+  #menu li a {
+    font-size: 16px;
+    padding: 8px;
+  }
+  #back-top {
+    width: 70px;
+    height: 60px;
+    background-size: cover;
   }
 }
