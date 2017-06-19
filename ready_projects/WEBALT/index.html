@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" class="leave-px">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web-Alt</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/main.min.css" rel="stylesheet">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#0f0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body class="ani">
+  <div id="fb-root"></div>
+  <script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <header class="page-header">
+    <div class="sitenavWrapper">
+      <nav class="sitenav">
+        <div class="container">
+          <div class="row">
+            <button class="menuTrigger" title="Кнопка мобильного меню" type="button"><i></i></button>
+            <ul class="sitenav__list">
+              <li class="sitenav__item">
+                <a href="#">Студия</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Наша команда</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Каталог</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Акции</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="sitenav__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="sliderWrap">
+      <div class="slickslider">
+        <div class="gallery-wrap ">
+          <div class="m_grid gallery ">
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/2.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Артстом</span>
+                <span class="m_grid__column-descr ">Сайт для стоматологии</span>
+              </span>
+            </a>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/1.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Глобал Тек</span>
+                <span class="m_grid__column-descr ">Сайт для транспортной компании</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <div class="webaltlogo">
+                <img src="img/rasterImages/webaltlogo.svg" alt="alt">
+                <a href="tel:+7(4212)25-30-85" class="custom webaltlogo__tel">
+                8 (4212) 25-30-85
+              </a>
+                <span class="webaltlogo__working-hours">пнд-птн с 9:00 до 18:00</span>
+                <a href="#" class="webaltlogo__call-btn">Заказать звонок</a>
+              </div>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/3.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Мамори</span>
+                <span class="m_grid__column-descr ">Интернет-магазин японских товаров</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column m_grid__column--width1 ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/4.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title m_grid__column-title--big  ">Wel Run</span>
+                <span class="m_grid__column-descr m_grid__column-descr--big ">Сайт крупнейшей сети автокомплексов</span>
+              </span>
+            </a>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/5.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Новая аптека</sp an>
+                <span class="m_grid__column-descr ">Сайт магазин для сети аптек</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/6.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Восточный Экспресс Банк</span>
+                <span class="m_grid__column-descr ">Платёжный модуль для сайта банка</span>
+              </span>
+            </a>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/7.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Пироэффект</span>
+                <span class="m_grid__column-descr ">Интернет-магазин праздничных фейрверков и др</span>
+              </span>
+            </a>
+              <div class="show-more">
+                <a href="#" class="custom more-proj-link">Ещё работы</a>
+              </div>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/8.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">OK Land</span>
+                <span class="m_grid__column-descr ">Сайт для школы обучения языкам</span>
+              </span>
+            </a>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/9.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Пейнтбол-парк</span>
+                <span class="m_grid__column-descr ">Сайт для спортивно-развлекательного комплекса</span>
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-wrap ">
+          <div class="m_grid gallery">
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/1.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Глобал Тек</span>
+                <span class="m_grid__column-descr ">Сайт для транспортной компании</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/6.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Восточный Экспресс Банк</span>
+                <span class="m_grid__column-descr ">Платёжный модуль для сайта банка</span>
+              </span>
+            </a>
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/7.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Пироэффект</span>
+                <span class="m_grid__column-descr ">Интернет-магазин праздничных фейрверков и др</span>
+              </span>
+            </a>
+              <div class="show-more">
+                <a href="#" class="custom more-proj-link">Ещё работы</a>
+              </div>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/8.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">OK Land</span>
+                <span class="m_grid__column-descr ">Сайт для школы обучения языкам</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/8.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">OK Land</span>
+                <span class="m_grid__column-descr ">Сайт для школы обучения языкам</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/3.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Мамори</span>
+                <span class="m_grid__column-descr ">Интернет-магазин японских товаров</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/1.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Глобал Тек</span>
+                <span class="m_grid__column-descr ">Сайт для транспортной компании</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column ">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/8.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">OK Land</span>
+                <span class="m_grid__column-descr ">Сайт для школы обучения языкам</span>
+              </span>
+            </a>
+            </div>
+            <div class="m_grid__column">
+              <a href="#">
+              <img src="img/rasterImages/gallery_imgs/2.jpg" alt="alt">
+              <span class="text-holder">
+                <span class="m_grid__column-title ">Артстом</span>
+                <span class="m_grid__column-descr ">Сайт для стоматологии</span>
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <main class="main-content">
+      <section class="counters">
+        <div class="counters__numbers">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-4 col-sm-3">
+                <div id="num_1" class="counters__num">8</div>
+              </div>
+              <div class="col-xs-4 col-sm-3">
+                <div id="num_2" class="counters__num">256</div>
+              </div>
+              <div class="col-xs-4 col-sm-3">
+                <div id="num_3" class="counters__num">7</div>
+              </div>
+              <div class="col-xs-3 posr negativeMargins">
+                <div class="top-studio">
+                  <div class="top-studio__head">Топ-2</div>
+                  <div class="top-studio__bottom">
+                    Лучших веб-студий дальнего востока в рейтинге рунета 2015
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="counters__descriptions">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-4 col-sm-3">
+                <div class="counters__descr">
+                  Лет на рынке
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-3">
+                <div class="counters__descr">
+                  Реализованных проектов
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-3">
+                <div class="counters__descr">
+                  Престижных премий и наград в интернет-индустрии
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="whatWeDo">
+        <div class="container">
+          <div class="row">
+            <h2 class="col-xs-12 whatWeDo__heading">Какие сайты мы делаем</h2>
+            <small class="col-xs-12 whatWeDo__descr">От самых простых до самых сложных</small>
+          </div>
+          <div class="row megaHook whatWeDo__content">
+            <div class="col-md-4 ">
+              <a class="whatWeDo__item " href="#">
+              <span class="whatWeDo__item-head ic-1">Сайты-визитки</span>
+              <p class="whatWeDo__item-descr">
+                Для презентации ключевой информации о вашем бизнесе через Интернет. Могут состоять несколько разделов, но без сложных сервисов и автоматизированных систем.
+                <span class="whatWeDo__showproj">
+                  <span>Посмотреть примеры</span>
+                </span>
+              </p>
+            </a>
+            </div>
+            <div class="col-md-4 ">
+              <a class="whatWeDo__item" href="#">
+              <span class="whatWeDo__item-head ic-2">Корпоративные сайты</span>
+              <p class="whatWeDo__item-descr">
+                Интернет-проекты любой степени сложности и назначения: от информационных порталов до сайтов корпораций. Перечень доступных сервисов индивидуален и зависит от ваших задач.
+                <span class="whatWeDo__showproj">
+                  <span>Посмотреть примеры</span>
+                </span>
+              </p>
+            </a>
+            </div>
+            <div class="col-md-4 ">
+              <a class="whatWeDo__item" href="#">
+              <span class="whatWeDo__item-head ic-3">Интернет-магазины</span>
+              <p class="whatWeDo__item-descr">
+                Полный набор инструментов для прямых продаж через Интернет: каталог товаров, электронные платежи, интеграция с С1 и CRM, сервисы и личные кабинеты для клиентов.
+                
+                <span class="whatWeDo__showproj">
+                  <span>Посмотреть примеры</span>
+                </span>
+              </p>
+            </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="advert">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 advert__wrap">
+              <div class="advert__content advert__bgimage" style="background-image: url('img/rasterImages/banner-image.jpg');">
+                <div class="advert__city">Семинар в Хабаровске</div>
+                <div class="advert__heading">"Как увеличить продажи Интернет-магазина"</div>
+                <div class="advert__info">
+                  <div class="advert__date">20 февраля 2016 года</div>
+                  <a href="#" class="advert__link">Зарегестрироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="smallReviews">
+        <div class="container">
+          <div class="row">
+            <h3 class="col-xs-12 section-heading smallReviews__heading">
+            Отзывы клиентов / <a href="#">Все отзывы</a> 
+          </h3>
+          </div>
+          <div class="row smallReviews__content">
+            <a href="#" class="col-sm-4 smallReviews__item modalTrigger is_text_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Кузнецовченко Д.И.</span>
+                    <span class="reviewer__position">
+                    зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                  </span>
+                  </div>
+                </div>
+                <p class="reviewer__review jq_dot">
+                  При разработке сайта требовалось придерживаться определенных корпоративных требований, что в общих чертах было выдержано, вместе с тем сайт получился оригинальным, а не клоном сайтов других времени и сил Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, fuga Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam cupiditate, consequuntur soluta ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aliquam, in nisi repellat commodi esse cupiditate autem voluptatem, debitis maxime et minus. Libero et illum vitae, suscipit consequuntur officia quos
+                </p>
+              </div>
+              <div class="smallReviews__overlay ">
+                <div class="smallReviews__overlayContent">
+                  <div class="smallReviews__overlayIcon">&nbsp;</div>
+                  <div class="smallReviews__overlayText">Читать дальше</div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="col-sm-4 smallReviews__item modalTrigger is_text_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Якимов Б.П.</span>
+                    <span class="reviewer__position">
+                    зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                  </span>
+                  </div>
+                </div>
+                <p class="reviewer__review jq_dot">
+                  При разработке сайта требовалось придерживаться определенных корпоративных требований, что в общих чертах было выдержано, вместе с тем сайт получился оригинальным, а не клоном сайтов других времени и сил Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, fuga Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam cupiditate, consequuntur soluta ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, laborum.
+                </p>
+              </div>
+              <div class="smallReviews__overlay">
+                <div class="smallReviews__overlayContent">
+                  <div class="smallReviews__overlayIcon">&nbsp;</div>
+                  <div class="smallReviews__overlayText">Читать дальше</div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="col-sm-4 smallReviews__item modalTrigger is_text_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Захаров Д.С</span>
+                    <span class="reviewer__position">
+                    зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                  </span>
+                  </div>
+                </div>
+                <p class="reviewer__review jq_dot">
+                  При разработке сайта требовалось придерживаться определенных корпоративных требований, что в общих чертах было выдержано, вместе с тем сайт получился оригинальным, а не клоном сайтов других времени и сил Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, fuga Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam cupiditate, consequuntur soluta ducimus Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div class="smallReviews__overlay">
+                <div class="smallReviews__overlayContent">
+                  <div class="smallReviews__overlayIcon">&nbsp;</div>
+                  <div class="smallReviews__overlayText">Читать дальше</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="videoReviews">
+        <div class="container">
+          <div class="row">
+            <h3 class="col-xs-12 section-heading ">Видеоотзывы</h3>
+          </div>
+          <div class="row">
+            <a href="#modal" class="col-sm-4  videoReviews__item modalTrigger is_video_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo videoReviews__playbackIcon">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Кузнецовченко Д.И.</span>
+                    <span class="reviewer__position">
+                      зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                    </span>
+                  </div>
+                </div>
+                <div class="reviewer__videoReview ">
+                  <div class="embed-responsive embed-responsive--16by9">
+                    <iframe src="https://www.youtube.com/embed/tdWV2xEyOfE?ecver=1" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#modal" class="col-sm-4  videoReviews__item modalTrigger is_video_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo videoReviews__playbackIcon">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Кузнецовченко Д.И.</span>
+                    <span class="reviewer__position">
+                      зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                    </span>
+                  </div>
+                </div>
+                <div class="reviewer__videoReview ">
+                  <div class="embed-responsive embed-responsive--16by9">
+                    <iframe src="https://www.youtube.com/embed/tdWV2xEyOfE?ecver=1" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#modal" class="col-sm-4  videoReviews__item modalTrigger is_video_content">
+              <div class="reviewer">
+                <div class="reviewer__info">
+                  <div class="reviewer__photo videoReviews__playbackIcon">
+                    <img src="img/rasterImages/reviewer-photo1.jpg" alt="alt">
+                  </div>
+                  <div class="reviewer__data">
+                    <span class="reviewer__name">Кузнецовченко Д.И.</span>
+                    <span class="reviewer__position">
+                      зам.ген.директора, ЗАО "Ланит-Партнер" Большое название компании
+                    </span>
+                  </div>
+                </div>
+                <div class="reviewer__videoReview ">
+                  <div class="embed-responsive embed-responsive--16by9">
+                    <iframe src="https://www.youtube.com/embed/tdWV2xEyOfE?ecver=1" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="onProgress">
+        <div class="container">
+          <div class="row">
+            <h4 class="col-xs-12 section-heading">Проекты в разработке</h4>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="onProgress__projects">
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+                <div class="project">
+                  <div class="project__heading">Новая аптека</div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="design" style="width: 100%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                  <div class="project__readyState">
+                    <div class="project__readyVisual ">
+                      <div class="programming" style="width: 30%"></div>
+                    </div>
+                    <div class="project__readyPercent">100%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 onProgress__descrs">
+              <div class="row megaHook megaHook--top">
+                <div class="col-sm-6 onProgress__services-item">
+                  <div class="onProgress__services-icon ic-4"></div>
+                  <p class="onProgress__services-text">Мы делаем сайты адаптивные под мобильные устройства</p>
+                </div>
+                <div class="col-sm-6 onProgress__services-item">
+                  <div class="onProgress__services-icon ic-5"></div>
+                  <p class="onProgress__services-text">60% наших клиентов приходят по рекоммендациям</p>
+                </div>
+                <div class="col-sm-6 onProgress__services-item">
+                  <div class="onProgress__services-icon ic-6"></div>
+                  <p class="onProgress__services-text">Комплексный подход. 12 специалистов, вместо одного</p>
+                </div>
+                <div class="col-sm-6 onProgress__services-item">
+                  <div class="onProgress__services-icon ic-7"></div>
+                  <p class="onProgress__services-text">SEO продвижение, контекстная реклама, видеопродвижение</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lastRecords">
+        <div class="container">
+          <div class="row">
+            <h5 class="col-xs-12 section-heading">Последние записи в блоге</h5>
+          </div>
+          <div class="row lastRecords__content">
+            <a class="col-sm-6 col-md-3 lastRecords__link" href="#">
+              <div class="lastRecords__item">
+                <img src="img/rasterImages/seminar-image-1.jpg">
+                <div class="lastRecords__overlay">
+                  <span class="lastRecords__date">14.10.2015</span>
+                  <p class="lastRecords__text">Федеральный семинар по 1С-Битрикс во Владивостоке</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-sm-6 col-md-3 lastRecords__link" href="#">
+              <div class="lastRecords__item">
+                <img src="img/rasterImages/seminar-image-2.jpg">
+                <div class="lastRecords__overlay">
+                  <span class="lastRecords__date">14.10.2015</span>
+                  <p class="lastRecords__text">22 октября мы провели первый семинар про корпоративные сайты</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-sm-6 col-md-3 lastRecords__link" href="#">
+              <div class="lastRecords__item">
+                <img src="img/rasterImages/seminar-image-3.jpg">
+                <div class="lastRecords__overlay">
+                  <span class="lastRecords__date">14.10.2015</span>
+                  <p class="lastRecords__text">Итоги интернет-премии "Стерх 2015"</p>
+                </div>
+              </div>
+            </a>
+            <a class="col-sm-6 col-md-3 lastRecords__link" href="#">
+              <div class="lastRecords__item">
+                <img src="img/rasterImages/seminar-image-4.jpg">
+                <div class="lastRecords__overlay">
+                  <span class="lastRecords__date">14.10.2015</span>
+                  <p class="lastRecords__text">22 октября мы провели первый семинар про корпоративные сайты</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="ourClients">
+        <div class="container">
+          <div class="ourClients__itmsHolder" id="ourClientsSlider">
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-1.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap invertColor">
+              <img src="img/rasterImages/client-img-2.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-3.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-4.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-5.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-1.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap invertColor">
+              <img src="img/rasterImages/client-img-2.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-3.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-4.png" alt="alt">
+            </div>
+            <div class="ourClients__imgWrap">
+              <img src="img/rasterImages/client-img-5.png" alt="alt">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-5 col-md-push-3 page-footer__item">
+          <h6 class="page-footer__formHeading">
+          Оставьте заявку или напишите вопрос и получите <span>Бесплатную консультацию</span>  специалиста!
+        </h6>
+          <div class="page-footer__formWrap">
+            <form action="" class="page-footer__form">
+              <div class="page-footer__inputWrap ic-9" data-required-mark="*">
+                <input type="text" name="name" placeholder="Ваше имя" required data-required-mark="*">
+              </div>
+              <div class="page-footer__bigInputWrap">
+                <div class="page-footer__inputWrap page-footer__inputWrap--halfWidth ic-10" data-required-mark="*">
+                  <input type="email" name="email" placeholder="Ваше e-mail" required>
+                </div>
+                <div class="page-footer__inputWrap page-footer__inputWrap--halfWidth ic-11">
+                  <input type="text" name="phone" placeholder="Ваш телефон" id="jq_maskedinput_phone">
+                </div>
+              </div>
+              <div class="page-footer__textareaWrap page-footer__inputWrap" data-required-mark="*">
+                <textarea placeholder="Текст сообщения" name="message" required></textarea>
+              </div>
+              <div class="page-footer__btnWrap">
+                <button class="page-footer__submitBtn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-3 col-md-pull-5 page-footer__item">
+          <div class="page-footer__logo">
+            <img src="img/rasterImages/webaltlogopng.png" alt="alt">
+          </div>
+          <div class="page-footer__info ic-8">
+            <span class="page-footer__infoItem ">ул. Волочаевская, 8г</span>
+            <span class="page-footer__infoItem">
+            <span>тел.:</span> <a href="tel:8(4212)253085">(4212) 25-30-85</a>
+            <a href="tel:8(4212)470300">(4212) 470-300</a>
+            </span>
+          </div>
+          <div class="page-footer__map">
+            <div class="page-footer__mapPic">
+              <img src="img/rasterImages/map-pic.png" alt="alt">
+            </div>
+            <a href="#" class="page-footer__mapText">
+            Найдите нас на карте
+          </a>
+          </div>
+        </div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1  page-footer__item">
+          <div class="facebookWidget">
+            <div class="fb-page" data-href="https://www.facebook.com/webalt" data-tabs="timeline" data-height="274" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/webalt" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/webalt">WEB Alternative</a></blockquote>
+            </div>
+          </div>
+          <div class="page-footer__socLinks">
+            <a class="socLink ic-12" href="#" title="Ссылка на intstagram">&nbsp;</a>
+            <a class="socLink ic-13" href="#" title="Ссылка на facebook">&nbsp;</a>
+            <a class="socLink ic-14" href="#" title="Ссылка на vkontakte">&nbsp;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal_overlay" id="modal_overlay">
+  </div>
+  <div class="modal_container_wrapper" id="superModalWrapper">
+    <div class="modal_container" id="superModal">
+      <button class="modal_close_btn" id="superModalCloseBtn" title="Закрыть модальное окно" type="button"></button>
+      <div class="modal_first_content_block">
+      </div>
+      <div class="modal_second_content_block"></div>
+    </div>
+  </div>
+  <script src='js/main.min.js'></script>
+</body>
+
+</html>
