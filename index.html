@@ -25,7 +25,50 @@
   <meta property="twitter:description" content="" />
 
 
-  <script src='js/font-loader.js'></script>
+  <style>
+    .visual-loader{
+      position: fixed;
+      z-index: 99991;
+      top:0;left:0;right:0;bottom:0;
+  
+      background-color: rgba(255,255,255, .99);
+    }
+    .visual-loader::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 150px;
+      height: 150px;
+      opacity: .6;
+      background: url('img/rasterImages/squares.svg') no-repeat ;
+      background-size: cover;
+  
+      /*border-width: 4px;
+      border-style:  double;
+      border-radius: 50%;
+      border-top-color: red; 
+      border-left-color: white; 
+      border-right-color: yellow; 
+      border-bottom-color: black;
+      animation: loader 4s ease-in-out alternate infinite;
+      box-shadow: 0 0 36px 12px #399db3;*/
+    }
+   /* @keyframes loader{
+      from{
+        border-width: 4px;
+        transform: rotate(0);
+      }
+      to{
+        border-width: 50px;
+        transform: rotate(4210deg);
+      }
+    }*/
+  </style>
+
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (d, w, c) {
@@ -60,12 +103,13 @@
   </noscript>
   <!-- /Yandex.Metrika counter -->
 
-  <link href="css/main.min.rem.css" rel="stylesheet" />
+
+
 
 </head>
 
 <body>
-  <header class="page-header fading">
+  <header class="page-header ">
     <div class="top-menu container container--custom">
       <div class="row">
         <div class="col-x10 col-l12">
@@ -124,10 +168,11 @@
     </div>
   </header>
 
-  <div class="wrapper fading">
+  <div class="wrapper ">
     <div class="container  container--custom">
       <div class="row">
         <main class="info-about-me col-x12 col-l9  col-l--order2">
+
           <section class="main-info  section-background">
             <h1 class="main-info__heading  section-title">Основная информация</h1>
             <div class="main-info__wrap">
@@ -246,6 +291,7 @@
               </li>
             </ul>
           </section>
+
         </main>
         <aside class="left-sidebar  col-l3 col-l--order1">
           <ul class="aside-nav">
@@ -265,7 +311,7 @@
       </div>
     </div>
   </div>
-  <div class="soc-icons soc-icons--bottom-socials fading">
+  <div class="soc-icons soc-icons--bottom-socials ">
     <div class="container container--custom">
       <div class="row">
         <div class="col-x12">
@@ -293,7 +339,7 @@
     </div>
   </div>
 
-  <footer class="page-footer fading">
+  <footer class="page-footer ">
     <div class="container container--custom">
       <div class="row">
         <div class="col-x12">
@@ -304,6 +350,11 @@
       </div>
     </div>
   </footer>
+  <div class="visual-loader" id="visual-loader"></div>
+
+  <script src='js/font-loader.js'></script>
+  <link href="css/main.min.rem.css" rel="stylesheet" />
+
 
 
 
