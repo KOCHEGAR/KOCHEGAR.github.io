@@ -165,8 +165,8 @@ $(document).ready(function() {
 
 
 
-      if (s + menuWidth >= itemOffsetLeft - someOffset &&
-        s + menuWidth <= itemRightSide - someOffset) {
+      if (s + menuWidth + 13 >= itemOffsetLeft - someOffset &&
+        s + menuWidth + 13 <= itemRightSide - someOffset) {
 
         if (!(self.hasClass('onview'))) {
 
