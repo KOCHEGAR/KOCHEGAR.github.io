@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   var body = $('body'); // тело страницы
   var wrapper = $('.wrapper'); // обёртка всего контента
-  var menu = wrapper.find('.menu') // всё меню
+  var menu = wrapper.find('.menu'); // всё меню
   var menuTrigger = menu.find('.menu__trigger'); //  кнопка меню
   var showableContent = menu.find('.menu__showable-content'); // содержимое меню
   var mainContent = wrapper.find('.main-content'); // блок с главным содержимым
@@ -54,18 +54,6 @@ $(document).ready(function() {
 
   });
 
-
-  // $('.events__item').on({
-
-  //   'mouseenter': function (e) {
-  //       $(this).addClass('onview');
-  //   },
-  //   'mouseleave': function (e) {
-  //       $(this).removeClass('onview');
-  //   }
-
-  // });
-
   /////////////////////////////////////
   linkedAnchors.click(function(e) {
     e.preventDefault();
@@ -101,11 +89,9 @@ $(document).ready(function() {
         scrollLeft: offset + width + magickNumber + num
       }, animdur);
     } else if (tt.attr('id') === 'linkedAnchor-2') {
-      if ((menu.hasClass('fxd'))) {
-        magickNumber = -menu.width() + 14;
-      }
+
       $('html,body').stop().animate({
-        scrollLeft: linkedAnchor1.offset().left + width + magickNumber
+        scrollLeft: 0
       }, animdur);
     }
   });
@@ -115,27 +101,56 @@ $(document).ready(function() {
   ///onscroll functions
 
 
-  // var someOffset = 400;
+  var someOffset = 15;
+
+
+  // var myoffset ;
+  // var left_margin_x;
+  // var dx;
 
   $(window).on('scroll', function(e) {
 
     var scrollLeft = $(this).scrollLeft();
-    // var s = Math.floor(scrollLeft); // округление дробного числа до целого в меньшую сторону
     var s = scrollLeft;
     var ww = $(this).width();
-    // console.log(s);
+
+    var menuWidth = menu.width();
 
     // манипуляции с меню, чтоб всё работало
     if (s === 0 && menu.hasClass('fxd')) {
       menu.removeClass('fxd').css({ 'opacity': 0 }).stop().animate({ 'opacity': 1 }, animdur);
       mainContent.removeClass('fixed-menu');
-    } else if (s !== 0 && (!(menu.hasClass('fxd'))) && (!(menu.hasClass('opened')))) {
+    } else if (s >= menuWidth && (!(menu.hasClass('fxd'))) && (!(menu.hasClass('opened')))) {
       menu.addClass('fxd').css({ 'opacity': 0 }).stop().animate({ 'opacity': 1 }, animdur);
       mainContent.addClass('fixed-menu');
     }
+    // console.log(s);
+    // console.log(menuWidth);
+
+
+    if (Math.ceil(s + ww) >= $(document).width()) {
+      // console.log('heyhey nigga');
+    }
+
 
     // увеличение элементов events__item
-    var menuWidth = menu.width();
+
+    // var contentWidth = $('main-content').width();
+
+    // left_margin_x = s+menuWidth;
+
+    // dx = Math.abs( contentWidth - ww );
+
+    // var p = left_margin_x/dx;
+
+    // myoffset = ww*p;
+    // var res = (myoffset+s+menuWidth)/1.7;
+
+    // console.log(dx);
+    // console.log(p);
+    // console.log(myoffset);
+    // console.log(res);
+
 
     // console.log(s);
     eventsItems.each(function(indx, el) {
@@ -145,174 +160,33 @@ $(document).ready(function() {
 
 
 
-      // if ( !(itemRightSide +(self.width()) > (s+menuWidth) + ww  + 150) ) {
 
-      //         if ( !(self.hasClass('onview')) ) {
-      //              self.addClass('onview');
-      //         } 
-      // }
-      // if ((s+menuWidth) > itemOffsetLeft || itemOffsetLeft > (s+menuWidth) + ww ){
-      //   if (self.hasClass('onview')) {
-      //       self.removeClass('onview');
-      //       console.log('sfdsdfsdfsdf');
-      //   }
-      // }
 
-      // if (itemRightSide <= (s+menuWidth)+ww -150) {
-      //     self.addClass('onview');
-      // }
-      // else{
-      //     if ((s+menuWidth) > itemOffsetLeft-150){
 
-      //       self.removeClass('onview');
-      //     }
 
-      // }
 
-      if (itemRightSide <= ((s + menuWidth) + ww - 150)) {
+      if (s + menuWidth >= itemOffsetLeft - someOffset &&
+        s + menuWidth <= itemRightSide - someOffset) {
+
         if (!(self.hasClass('onview'))) {
-          // console.log('kookok');
+
+          if (indx <= eventsItems.length - (eventsItems.length - 5)) {
+
+            someOffset += 284;
+          } else { someOffset = 15; }
+          console.log('of111 ' + someOffset);
           self.addClass('onview');
         }
+      } else if ((s + menuWidth) + ww < itemRightSide && self.hasClass('onview')) {
+
+        if (indx <= eventsItems.length - (eventsItems.length - 5)) {
+          // console.log('kokoko222222');
+          someOffset -= 284;
+        } else { someOffset = 15; }
+
+        console.log('of222 ' + someOffset);
+        self.removeClass('onview');
       }
-      if ((s + menuWidth) >= itemRightSide || (s + menuWidth) + ww < itemOffsetLeft) {
-        if (self.hasClass('onview')) {
-          self.removeClass('onview');
-          // console.log('sfdsdfsdfsdf');
-        }
-      }
-
-      // if ( (s+menuWidth) > itemOffsetLeft ) {
-      //   if (self.hasClass('onview')) {
-      //       self.removeClass('onview');
-      //       console.log('sfdsdfsdfsdf');
-      //   }
-      // }
-
-      // if (s + menuWidth > itemRightSide -self.width()) {
-
-      //     if(self.hasClass('onview')){
-
-      //        self.removeClass('onview');
-      //     } 
-      // }
-
-      // if( !( (s+menuWidth) <= itemOffsetLeft && (self.width() + itemOffsetLeft) < ( (s+menuWidth) + ww) ) ){
-
-      //     if (self.hasClass('onview')) {
-      //         self.removeClass('onview');
-      //     }
-
-      // }
-      // else{self.addClass('onview');}
-
-      //  if( ( (s+menuWidth) <= itemOffsetLeft && 
-      //        (self.width()*2 + itemOffsetLeft) < ( (s+menuWidth) + ww -150) ) ){
-      //       self.removeClass('onview');
-      //         self.addClass('onview');
-
-      //     // if ( !(self.hasClass('onview')) ) {
-      //     //     self.addClass('onview');
-      //     // }
-
-      // } 
-      // if ((s+menuWidth) > itemOffsetLeft || itemOffsetLeft > (s+menuWidth) + ww  -150){
-      //       self.removeClass('onview');
-
-      //   // if (self.hasClass('onview')) {
-      //   //     self.removeClass('onview');
-      //   //     console.log('sfdsdfsdfsdf');
-      //   // }
-      // }
-
-      // if () {
-      //     if (self.hasClass('onview')) {
-      //         self.removeClass('onview');
-      //     }
-      // }
-
-      // if (true) {}
-
-      //   if ( s + menuWidth >= itemOffsetLeft/*- someOffset*/ && 
-      //      s + menuWidth < itemRightSide /*- someOffset*/ ) {
-
-      //     console.log($(window).width());
-
-      //     if ( !(self.hasClass('onview')) ) {
-
-      //         self.addClass('onview');
-      //     }
-      // }
-      // else if (self.hasClass('onview')){
-      //   self.removeClass('onview');
-      // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      //  else if (  (s+menuWidth)+ww <  itemOffsetLeft ){
-      //     if (self.hasClass('onview')) {
-      //         console.log('aaaaaaaaaa');
-
-      //         self.removeClass('onview');
-      //     }
-      // }
-
-      // console.log('левое смещение должно быть больше правой стороны итема ' + (s+menuWidth) + "---" + itemRightSide );
-      // else {
-      //     if ( self.hasClass('onview') ) {
-
-      //         self.removeClass('onview');
-      //     }
-      // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // if ( s + menuWidth >= itemOffsetLeft /*- someOffset*/ && 
-      //      s + menuWidth < itemOffsetLeft + self.width() /*- someOffset*/ ) {
-
-      //     console.log($(window).width());
-
-      //     if ( !(self.hasClass('onview')) ) {
-
-      //         self.addClass('onview');
-      //     }
-      // }
-      // else if (self.hasClass('onview')){
-      //   self.removeClass('onview');
-      // }
 
     });
 
