@@ -318,7 +318,7 @@ body.ovHidden {
   position: relative;
   width: 100%;
   height: 100%;
-  min-width: 4000px;
+  min-width: 1000px;
   background-color: #fff;
   min-height: 1080px;
   max-height: 1200px;
@@ -621,12 +621,13 @@ body.ovHidden {
 .main-content {
   position: relative;
   z-index: 1;
-  -webkit-transition: -webkit-transform 0.35s ease-in-out;
-  transition: -webkit-transform 0.35s ease-in-out;
-  transition: transform 0.35s ease-in-out;
-  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+  -webkit-transition: left 0.9s ease,-webkit-transform 0.35s ease-in-out;
+  transition: left 0.9s ease,-webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out,left 0.9s ease;
+  transition: transform 0.35s ease-in-out,left 0.9s ease,-webkit-transform 0.35s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -645,6 +646,7 @@ body.ovHidden {
 
 .main-content__first {
   position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -714,8 +716,18 @@ body.ovHidden {
 
 .main-content__secord {
   padding-left: 19px;
+  height: 100%;
   position: relative;
+  z-index: 2;
   padding-right: 69px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  left: 0;
+  -webkit-transition: left .9s ease;
+  transition: left .9s ease;
 }
 
 .custom-counter li {
@@ -741,11 +753,19 @@ body.ovHidden {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   height: 100%;
+  position: relative;
+  min-width: 5400px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .events__item {
   min-width: 346px;
   max-width: 346px;
+  overflow: hidden;
+  position: relative;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   border-left: 1px solid #d9d9d9;
@@ -760,15 +780,11 @@ body.ovHidden {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-transition: min-width 0.455s ease,  max-width 0.455s ease;
-  transition: min-width 0.455s ease,  max-width 0.455s ease;
+  -webkit-transition: min-width 0.8s ease,  max-width 0.8s ease;
+  transition: min-width 0.8s ease,  max-width 0.8s ease;
 }
 
-.events__item:last-child {
+.events__item:first-child {
   border-right: 1px solid #d9d9d9;
 }
 
@@ -779,6 +795,7 @@ body.ovHidden {
   align-self: flex-end;
   -webkit-transition: color 0.35s ease-in-out;
   transition: color 0.35s ease-in-out;
+  margin-bottom: auto;
 }
 
 .w320 {
@@ -799,6 +816,10 @@ body.ovHidden {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  position: relative;
+  top: 0;
+  -webkit-transition: top 0.35s ease-in-out;
+  transition: top 0.35s ease-in-out;
 }
 
 .event__date {
@@ -815,7 +836,7 @@ body.ovHidden {
 .event__category {
   font: 100 16px/1 "Roboto",Arial,Tahoma,sans-serif;
   color: #000;
-  margin-top: 112px;
+  margin-top: 113px;
 }
 
 .event__category a {
@@ -828,17 +849,29 @@ body.ovHidden {
 }
 
 .event__img-wrap {
-  margin-top: 12px;
-  min-height: 171px;
+  margin-top: 13px;
+  min-height: 170px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(#fff));
+  background-image: -webkit-linear-gradient(bottom, #000 0%, #fff 100%);
+  background-image: linear-gradient(to top, #000 0%, #fff 100%);
   -webkit-transition: width 0.35s ease-in-out;
   transition: width 0.35s ease-in-out;
 }
 
+.event__img-wrap img {
+  display: block;
+  width: 100%;
+}
+
 .event__descr {
-  margin-top: 13px;
-  margin-bottom: 60px;
+  margin-top: 8px;
+  margin-bottom: 84px;
+  position: relative;
   font: 300 16px/1.2 "Roboto",Arial,Tahoma,sans-serif;
   color: #777;
+  min-height: 180px;
+  top: 0;
+  opacity: 1;
 }
 
 .events__item.onview {
@@ -849,45 +882,44 @@ body.ovHidden {
 .events__item.onview::before {
   color: #818181;
   width: 320px;
+  margin-bottom: 272px;
 }
 
 .events__item.onview .event__date {
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
   width: 320px;
 }
 
 .events__item.onview .event__descr {
   width: 320px;
-  margin-bottom: 92px;
+  margin-bottom: 84px;
+  -webkit-animation: fadeAndTrans .95s ease;
+  animation: fadeAndTrans .95s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .events__item.onview .event__title {
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
   width: 320px;
 }
 
 .events__item.onview .event__category {
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
   width: 320px;
+  margin-top: 103px;
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .events__item.onview .event__img-wrap {
-  -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  width: 958px;
-  height: 453px;
+  width: 100%;
   overflow: hidden;
+  position: absolute;
+  top: 195px;
+}
+
+.empty-space-block {
+  -webkit-transition: max-width .8s ease, min-width .8s ease;
+  transition: max-width .8s ease, min-width .8s ease;
 }
 
 .our-vision-text {
@@ -895,7 +927,8 @@ body.ovHidden {
   letter-spacing: 0.077rem;
   color: #000;
   margin-bottom: 0;
-  min-width: 1500px;
+  max-width: 1532px;
+  min-width: 1532px;
 }
 
 .our-vision__list {
@@ -947,6 +980,56 @@ body.ovHidden {
 .vision__img-wrap {
   margin-top: 62px;
   padding: 12px;
-  background-color: rgba(239,239,239,0.6);
-  height: 284px;
+}
+
+.vision__img-wrap img {
+  display: block;
+}
+
+@-webkit-keyframes fadeAndTrans {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    top: -465px;
+  }
+}
+
+@keyframes fadeAndTrans {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    top: -465px;
+  }
 }
