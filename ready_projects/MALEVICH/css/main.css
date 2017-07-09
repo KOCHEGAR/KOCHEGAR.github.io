@@ -764,8 +764,10 @@ body.ovHidden {
 .events__item {
   min-width: 346px;
   max-width: 346px;
+  position: absolute;
+  background-color: aliceblue;
+  height: 100%;
   overflow: hidden;
-  position: relative;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   border-left: 1px solid #d9d9d9;
@@ -875,8 +877,10 @@ body.ovHidden {
 }
 
 .events__item.onview {
-  min-width: 985px;
-  max-width: 985px;
+  right: -webkit-calc(100% - 346px);
+  right: calc(100% - 346px);
+  min-width: 980px;
+  max-width: 980px;
 }
 
 .events__item.onview::before {
@@ -918,8 +922,8 @@ body.ovHidden {
 }
 
 .empty-space-block {
-  -webkit-transition: max-width .8s ease, min-width .8s ease;
-  transition: max-width .8s ease, min-width .8s ease;
+  -webkit-transition: max-width .6s ease, min-width .6s ease;
+  transition: max-width .6s ease, min-width .6s ease;
 }
 
 .our-vision-text {

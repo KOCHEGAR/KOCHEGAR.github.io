@@ -215,7 +215,7 @@ $(document).ready(function() {
     },
     offset: {
       top: 0,
-      left: ($(window).width() / 2) - (2 / 2)
+      left: ($(window).width() / 2) - (2 / 2) + 110
     }
   });
   var debugitem2 = debugitem.clone();
@@ -237,10 +237,10 @@ $(document).ready(function() {
     $(this).addClass('scrolled');
   });
 
-  esb.css({
-    'min-width': '885px',
-    'max-width': '885px'
-  });
+  // esb.css({
+  //   'min-width' : '885px',
+  //   'max-width' : '885px'
+  // });
 
 
   $(window).on('scroll', function(e) {
@@ -300,7 +300,7 @@ $(document).ready(function() {
     leftVal = leftVal.substr(0, leftVal.length - 2);
 
     if (s < 150 && lastScrollLeft > s && leftVal !== 0) {
-      console.log('kokook');
+
       mContent.css({ 'left': 0 });
       eventsItems.each(function() {
         $(this).removeAttr('offset');
@@ -312,53 +312,50 @@ $(document).ready(function() {
       var itemOffsetLeft = self.offset().left;
       var itemRightSide = self.offset().left + self.width();
 
+      // 
+      if ((s + halfWindow + (menuWidth + 40) >= itemRightSide + 28) && (!(self.hasClass('onview')))) {
 
-      if ((s + halfWindow >= itemRightSide + 28) && (!(self.hasClass('onview')))) {
+        // if (indx === 0) {
+        //     esb.css({
+        //       'min-width':'779px',
+        //       'max-width': '779px' 
+        //     }); 
+        //     $('html,body').stop().animate({
+        //       scrollLeft: esb.offset().left + esb.width()+3
+        //     },400);
+        // }
+        // console.log('okokokokook')
+        self.addClass('onview');
+        // setTimeout(function () {
+        //   var pullLeft = Math.ceil(self.offset().left - s-menuWidth);
+        //   // --- если окно браузера сохранило положение скролла 
+        //   // и после перезагрузки подставила его, то обнуляем число
+        //   // на которое должны были сместить mContent_2.
+        //   if (pullLeft < 0) {pullLeft = 0;}
+        //   // ---
+        //   if (!canPullOrNot) {
 
+        //     self.attr({'offset' : pullLeft});
 
-        if (indx === 0) {
-          esb.css({
-            'min-width': '779px',
-            'max-width': '779px'
-          });
-          $('html,body').stop().animate({
-            scrollLeft: esb.offset().left + esb.width() + 3
-          }, 400);
-        }
-        // console.log(indx);
-
-        setTimeout(function() {
-          self.addClass('onview');
-          // var pullLeft ;//= Math.ceil(self.offset().left - s-menuWidth);
-          var pullLeft = Math.ceil(self.offset().left - s - menuWidth);
-          // --- если окно браузера сохранило положение скролла 
-          // и после перезагрузки подставила его, то обнуляем число
-          // на которое должны были сместить mContent_2.
-          if (pullLeft < 0) { pullLeft = 0; }
-          // ---
-          if (!canPullOrNot) {
-
-            self.attr({ 'offset': pullLeft });
-
-            mContent.css({
-              'left': '-=' + pullLeft
-            });
-          }
-        }, 170);
+        //     mContent.css({
+        //       'left' : '-=' + pullLeft
+        //     });          
+        //   }
+        // },130);
       }
       // Немного перестраховки 
       // Убираем случаи, когда доскроллив до певрого элемента,
       // остаётся погрешность в расчетах сдвига mContent_2 влево.
       // Когда достигаем первого элемента , сносим left в 0
-      if ((s + halfWindow > itemRightSide - 456 &&
-          s + halfWindow < itemRightSide - 128) &&
-        lastScrollLeft > s &&
-        self.hasClass('onview') &&
-        eventsItems.length - 1 === indx) {
-        self.removeAttr('offset');
+      // if ( (s+halfWindow > itemRightSide-456 && 
+      //       s+halfWindow < itemRightSide-128) &&
+      //       lastScrollLeft > s &&
+      //       self.hasClass('onview') &&
+      //       eventsItems.length-1 === indx ) {
+      //     self.removeAttr('offset');
 
-        mContent.css({ 'left': 0 });
-      }
+      //     mContent.css({'left' : 0}); 
+      // }
 
       // if (s<150 && lastScrollLeft > s && leftVal !==0) {
       //     console.log('kokook');
@@ -368,55 +365,57 @@ $(document).ready(function() {
       //     });
       // }
 
-      if ((s + halfWindow > itemRightSide - 356 &&
-          s + halfWindow < itemRightSide - 128) &&
-        lastScrollLeft > s &&
-        self.hasClass('scrolled') &&
-        self.hasClass('onview')) {
+      // if ( (s+halfWindow > itemRightSide-356 && 
+      //       s+halfWindow < itemRightSide-128) && 
+      //       lastScrollLeft > s && 
+      //       self.hasClass('scrolled') && 
+      //       self.hasClass('onview')) {
 
-        self.removeClass('scrolled');
+      //       self.removeClass('scrolled');
 
-        if (!canPullOrNot) {
+      //       if (!canPullOrNot) {
 
-          var pullRight = self.attr('offset') || 0;
-          var ofst = self.attr('offset');
+      //         var pullRight = self.attr('offset') || 0;
+      //         var ofst = self.attr('offset');
 
-          if ($('.events__item.scrolled').length === 1 ||
-            $('.events__item.scrolled').length === 0) {
-            // Случается что при быстром сдвиге скроллбара влево
-            // (если он был прокручен до этого вправо) 
-            // возникает ошибка расчетах сдвига mContent_2 вправо
-            // и поэтому то же,что и в else if ниже, но при достижении
-            // предпоследнего или последнего элемента.
+      //         if ($('.events__item.scrolled').length === 1 || 
+      //             $('.events__item.scrolled').length === 0 ) {
+      //             // Случается что при быстром сдвиге скроллбара влево
+      //             // (если он был прокручен до этого вправо) 
+      //             // возникает ошибка расчетах сдвига mContent_2 вправо
+      //             // и поэтому то же,что и в else if ниже, но при достижении
+      //             // предпоследнего или последнего элемента.
 
-            mContent.css('left', '0px');
+      //             mContent.css('left', '0px');
 
-            eventsItems.each(function() {
-              $(this).removeAttr('offset');
-            });
-          } else if (((+leftVal) + (+ofst)) > 0) {
-            // Если проскролить скроллбар слишком быстро вправо
-            // (еще это бывает при перезагрузки страницы, 
-            // а позиция скролла сохранена браузером и подставлена после перезагрузки)
-            // то будут погрешности в расчетах сдвига mContent_2 влево.
-            // Поэтому, если leftval+ofst > 0, то выставляем mContent_2.css('left', '0px')
-            //
-            mContent.css('left', '0px');
+      //             eventsItems.each(function () {
+      //                $(this).removeAttr('offset');
+      //             });
+      //         }
+      //         else if ( ((+leftVal) + (+ofst)) > 0 ) { 
+      //           // Если проскролить скроллбар слишком быстро вправо
+      //           // (еще это бывает при перезагрузки страницы, 
+      //           // а позиция скролла сохранена браузером и подставлена после перезагрузки)
+      //           // то будут погрешности в расчетах сдвига mContent_2 влево.
+      //           // Поэтому, если leftval+ofst > 0, то выставляем mContent_2.css('left', '0px')
+      //           //
+      //             mContent.css('left', '0px');
 
-            eventsItems.each(function() {
-              $(this).removeAttr('offset');
-            });
-          } else {
-            // Есди всё ОК, то двигаем
-            // self.removeAttr('offset');
-            mContent.css({
+      //             eventsItems.each(function () {
+      //                $(this).removeAttr('offset');
+      //             });
+      //         }
+      //         else{  
+      //           // Есди всё ОК, то двигаем
+      //           // self.removeAttr('offset');
+      //           mContent.css({
 
-              'left': '+=' + pullRight
-            });
-          }
+      //             'left' : '+=' + pullRight
+      //           });
+      //         }
 
-        }
-      }
+      //       }
+      // }
 
 
       // отчасти рабочий вариант 1 
