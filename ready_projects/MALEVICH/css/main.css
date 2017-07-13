@@ -774,6 +774,8 @@ body.ovHidden {
   padding-left: 11px;
   padding-right: 11px;
   padding-bottom: 10px;
+  -webkit-transition: width 0.05s ease;
+  transition: width 0.05s ease;
   background-color: aliceblue;
 }
 
@@ -842,10 +844,6 @@ body.ovHidden {
   -webkit-transition: top 0.05s ease;
   transition: top 0.05s ease;
   opacity: 1;
-}
-
-.events__item.onview .event__img-wrap {
-  width: 100%;
 }
 
 .empty-space-block {

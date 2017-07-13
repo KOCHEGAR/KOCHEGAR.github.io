@@ -141,7 +141,7 @@ $(document).ready(function() {
     });
     var tween2 = new TweenMax.to(eventItemImgWrap, 1, {
       maxHeight: '597px',
-      ease: Power0.easeNone
+      // ease: Power0.easeNone
     });
     var tween3 = new TweenMax.to(eventItemParagraph, 1, {
       top: 105,
@@ -158,7 +158,8 @@ $(document).ready(function() {
     // });
 
     var timeline = new TimelineMax();
-    timeline.add(tween)
+    timeline
+      .add(tween)
       .add(tween2, '0')
       .add(tween3, '0')
       .add(tween4, '0');
@@ -166,7 +167,7 @@ $(document).ready(function() {
 
     var scene = new ScrollMagic.Scene({
         triggerElement: self,
-        tweenChanges: true,
+        // tweenChanges: true,
         duration: 256,
         offset: 0,
         // reverse: false
