@@ -774,8 +774,8 @@ body.ovHidden {
   padding-left: 11px;
   padding-right: 11px;
   padding-bottom: 10px;
-  -webkit-transition: width 0.05s ease;
-  transition: width 0.05s ease;
+  -webkit-transition: width 0.09s ease;
+  transition: width 0.09s ease;
   background-color: aliceblue;
 }
 
@@ -822,6 +822,8 @@ body.ovHidden {
   right: 11px;
   left: 11px;
   top: 627px;
+  -webkit-transition: max-height 0.09s ease;
+  transition: max-height 0.09s ease;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(#fff));
   background-image: -webkit-linear-gradient(bottom, #000 0%, #fff 100%);
   background-image: linear-gradient(to top, #000 0%, #fff 100%);
@@ -841,8 +843,8 @@ body.ovHidden {
   min-height: 180px;
   top: 813px;
   right: 11px;
-  -webkit-transition: top 0.05s ease;
-  transition: top 0.05s ease;
+  -webkit-transition: top 0.09s ease;
+  transition: top 0.09s ease;
   opacity: 1;
 }
 

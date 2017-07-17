@@ -84,6 +84,7 @@ $(document).ready(function() {
       $('html,body').stop().animate({
         // составное число для смещения скролла
         scrollLeft: offset + width + magickNumber + openedOrClosedMenu
+        // scrollLeft: eventsItems[0].querySelector('.event')
       }, 900, function() {
         canPullOrNot = false;
       });
@@ -128,38 +129,50 @@ $(document).ready(function() {
   // init controller
   var controller = new ScrollMagic.Controller({ vertical: false });
 
-  $('.events .events__item').each(function() {
+  $('.events .events__item').each(function(indx, el) {
     var self = $(this);
     var eventItem = self.find('.event');
     var eventItemNumber = self.find('.event__number');
     var eventItemImgWrap = self.find('.event__img-wrap');
     var eventItemParagraph = self.find('.event__descr');
 
-    var tween = new TweenMax.to(eventItem, 1, {
-      width: '+=634',
+    var timeline = new TimelineMax();
+    var dur = 1;
+
+    if (eventsItems[indx - 1] !== undefined) {
+      var r = eventsItems[indx - 1].querySelector('.event');
+      // console.log(r.offsetLeft);
+      var tween5 = new TweenMax.to(r, dur, {
+        x: '-=' + (W_max - W_min),
+        ease: Power0.easeNone,
+
+        // onUpdate: myUpdFunk,
+        // onUpdateParams: [indx,r]
+      });
+
+      timeline.add(tween5, '0');
+    }
+
+    var tween = new TweenMax.to(eventItem, dur, {
+      width: '+=' + (W_max - W_min),
       ease: Power0.easeNone
     });
-    var tween2 = new TweenMax.to(eventItemImgWrap, 1, {
-      maxHeight: '597px',
-      // ease: Power0.easeNone
+    var tween2 = new TweenMax.to(eventItemImgWrap, dur, {
+      maxHeight: '+=427',
+      ease: Power0.easeNone
     });
-    var tween3 = new TweenMax.to(eventItemParagraph, 1, {
+    var tween3 = new TweenMax.to(eventItemParagraph, dur, {
       top: 105,
-      ease: Back.easeInOut
+      ease: Circ.easeOut
     });
-    var tween4 = new TweenMax.to(eventItemNumber, 1, {
+    var tween4 = new TweenMax.to(eventItemNumber, dur, {
       color: '#818181',
       ease: Power0.easeNone
     });
-    // var tween5 = new TweenMax.fromTo(eventItemNumber, 0.5,{
-    //     y:'-100'
-    // },{
-    //     y:'0'
-    // });
 
-    var timeline = new TimelineMax();
+
     timeline
-      .add(tween)
+      .add(tween, '0')
       .add(tween2, '0')
       .add(tween3, '0')
       .add(tween4, '0');
@@ -168,13 +181,19 @@ $(document).ready(function() {
     var scene = new ScrollMagic.Scene({
         triggerElement: self,
         // tweenChanges: true,
-        duration: 256,
+        duration: 340,
         offset: 0,
+        triggerHook: 0.545
         // reverse: false
       })
       .setTween(timeline)
       .addIndicators()
       .addTo(controller);
+
+    scene.on("progress", function(event) {
+      console.log("Scene progress changed to " + event.progress);
+      console.log("scrollDirection " + event.scrollDirection);
+    });
   });
 
 
@@ -183,7 +202,9 @@ $(document).ready(function() {
   //  {opacity:1,backgroundColor:'green'} ,
   //  0.4);
 
-
+  function myUpdFunk(indx, trgt) {
+    console.log(indx + '---' + trgt.parentElement.offsetLeft);
+  }
 
 
   ///onscroll functions
@@ -208,34 +229,34 @@ $(document).ready(function() {
 
 
 
-  var debugitem = $('<div>', {
-    class: 'debug_item',
-    css: {
-      backgroundColor: 'red',
-      display: 'block',
-      position: 'fixed',
-      zIndex: '999999',
-      width: '2px',
-      height: '100%',
-      pointerEvents: 'none'
-    },
-    offset: {
-      top: 0,
-      left: ($(window).width() / 2) - (2 / 2)
-    }
-  });
-  var debugitem2 = debugitem.clone();
+  // var debugitem = $('<div>',{
+  //   class: 'debug_item',
+  //   css: {
+  //         backgroundColor: 'red',
+  //         display: 'block',
+  //         position: 'fixed',
+  //         zIndex: '999999',
+  //         width: '2px',
+  //         height: '100%',
+  //         pointerEvents:'none'
+  //       },
+  //   offset:{
+  //     top: 0,
+  //     left: ($(window).width()/2) - (2/2) + 71
+  //   }
+  // });
+  // var debugitem2 = debugitem.clone();
 
-  debugitem2.css({
-    'height': '2px',
-    'width': '100%',
-    'left': '0',
-    // 'top': '50%',
-    'background-color': 'blue',
-    'top': ($(window).height() / 2) - (2 / 2)
-  });
+  // debugitem2.css({
+  //   'height': '2px',
+  //   'width' : '100%', 
+  //   'left':'0', 
+  //   // 'top': '50%',
+  //   'background-color': 'blue',
+  //   'top' : ($(window).height()/2) - (2/2) 
+  // });
 
-  $('html').append(debugitem).append(debugitem2);
+  // $('html').append(debugitem).append(debugitem2);
 
   var lastScrollLeft = 0;
 
