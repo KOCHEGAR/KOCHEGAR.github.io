@@ -137,17 +137,15 @@ $(document).ready(function() {
     var eventItemParagraph = self.find('.event__descr');
 
     var timeline = new TimelineMax();
-    var dur = 1;
+    var dur = 0.1;
 
     if (eventsItems[indx - 1] !== undefined) {
       var r = eventsItems[indx - 1].querySelector('.event');
-      // console.log(r.offsetLeft);
-      var tween5 = new TweenMax.to(r, dur, {
-        x: '-=' + (W_max - W_min),
-        ease: Power0.easeNone,
 
-        // onUpdate: myUpdFunk,
-        // onUpdateParams: [indx,r]
+      var tween5 = new TweenMax.to(r, dur, {
+        right: '+=' + (W_max - W_min),
+        ease: Power1.easeIn,
+
       });
 
       timeline.add(tween5, '0');
@@ -155,19 +153,22 @@ $(document).ready(function() {
 
     var tween = new TweenMax.to(eventItem, dur, {
       width: '+=' + (W_max - W_min),
-      ease: Power0.easeNone
+      ease: Power1.easeIn
+      // ease: SlowMo.ease.config(0.1, 0.4, false)
     });
     var tween2 = new TweenMax.to(eventItemImgWrap, dur, {
       maxHeight: '+=427',
-      ease: Power0.easeNone
+      ease: Power1.easeIn
+      // ease: SteppedEase.config(40)
+      // ease: SlowMo.ease.config(0.1, 0.4, false)
     });
     var tween3 = new TweenMax.to(eventItemParagraph, dur, {
       top: 105,
-      ease: Circ.easeOut
+      ease: Power1.easeIn
     });
     var tween4 = new TweenMax.to(eventItemNumber, dur, {
       color: '#818181',
-      ease: Power0.easeNone
+      ease: Power1.easeIn
     });
 
 
@@ -180,7 +181,7 @@ $(document).ready(function() {
 
     var scene = new ScrollMagic.Scene({
         triggerElement: self,
-        // tweenChanges: true,
+        tweenChanges: true,
         duration: 340,
         offset: 0,
         triggerHook: 0.545
@@ -190,10 +191,10 @@ $(document).ready(function() {
       .addIndicators()
       .addTo(controller);
 
-    scene.on("progress", function(event) {
-      console.log("Scene progress changed to " + event.progress);
-      console.log("scrollDirection " + event.scrollDirection);
-    });
+    // scene.on("progress", function (event) {
+    //   console.log("Scene progress changed to " + event.progress);
+    //   console.log("scrollDirection " + event.scrollDirection);
+    // });
   });
 
 
@@ -229,34 +230,34 @@ $(document).ready(function() {
 
 
 
-  // var debugitem = $('<div>',{
-  //   class: 'debug_item',
-  //   css: {
-  //         backgroundColor: 'red',
-  //         display: 'block',
-  //         position: 'fixed',
-  //         zIndex: '999999',
-  //         width: '2px',
-  //         height: '100%',
-  //         pointerEvents:'none'
-  //       },
-  //   offset:{
-  //     top: 0,
-  //     left: ($(window).width()/2) - (2/2) + 71
-  //   }
-  // });
-  // var debugitem2 = debugitem.clone();
+  var debugitem = $('<div>', {
+    class: 'debug_item',
+    css: {
+      backgroundColor: 'red',
+      display: 'block',
+      position: 'fixed',
+      zIndex: '999999',
+      width: '2px',
+      height: '100%',
+      pointerEvents: 'none'
+    },
+    offset: {
+      top: 0,
+      left: ($(window).width() / 2) - (2 / 2) + 71
+    }
+  });
+  var debugitem2 = debugitem.clone();
 
-  // debugitem2.css({
-  //   'height': '2px',
-  //   'width' : '100%', 
-  //   'left':'0', 
-  //   // 'top': '50%',
-  //   'background-color': 'blue',
-  //   'top' : ($(window).height()/2) - (2/2) 
-  // });
+  debugitem2.css({
+    'height': '2px',
+    'width': '100%',
+    'left': '0',
+    // 'top': '50%',
+    'background-color': 'blue',
+    'top': ($(window).height() / 2) - (2 / 2)
+  });
 
-  // $('html').append(debugitem).append(debugitem2);
+  $('html').append(debugitem).append(debugitem2);
 
   var lastScrollLeft = 0;
 
