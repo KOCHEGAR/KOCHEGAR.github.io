@@ -83,19 +83,19 @@ $(document).ready(function() {
 
       $('html,body').stop().animate({
         // составное число для смещения скролла
-        scrollLeft: offset + width + magickNumber + openedOrClosedMenu
+        scrollLeft: '+=' + 350 //offset + width + magickNumber + openedOrClosedMenu
         // scrollLeft: eventsItems[0].querySelector('.event')
-      }, 900, function() {
+      }, 600, function() {
         canPullOrNot = false;
       });
     } else if (tt.attr('id') === 'linkedAnchor-2') {
 
       canPullOrNot = true;
 
-      eventsItems.each(function() {
-        $(this).removeAttr('offset').removeClass('scrolled');
-      });
-      mContent.css({ 'left': 0 });
+      // eventsItems.each(function () {
+      //   $(this).removeAttr('offset').removeClass('scrolled');
+      // });
+      // mContent.css({'left':0});
       $('html,body').stop().animate({
         scrollLeft: 0
       }, animdur + 650, function() {
@@ -104,18 +104,35 @@ $(document).ready(function() {
     }
   });
 
-  // // отрицательное число или нет
-  // Math.sign = Math.sign || function(x) {
-  //   x = +x; // преобразуем в число
-  //   if (x === 0 || isNaN(x)) {
-  //     return x;
-  //   }
-  //   return x > 0 ? 1 : -1;
-  // };
 
-  // $('.events .events__item').each(function () {
+  (function() {
 
-  // })
+
+    // var cor = new ScrollMagic.Controller({vertical: false});
+    // if (menu.hasClass('opened')) {
+    //   // mainContent
+    //   var tlm = new TimelineMax();
+
+    //   var tween = new  TweenMax.to(menu, 1,{
+    //     x: '-1280'
+    //   });
+    //   var tween1 = new TweenMax.to(mainContent, 1,{
+    //     x: '0'
+    //   });
+    //   tlm.add(tween,'0')
+    //   .add(tween1,'0');
+
+    //   var scene = new ScrollMagic.Scene({
+    //     triggerElement: $('.wrapper'),
+    //     duration:900,
+    //     triggerHook: 0
+    //   })
+    //   .setTween(tlm)
+    //   .addIndicators()
+    //   .addTo(cor);
+    // }
+
+  }());
 
   $('.events .events__item').each(function(indx, el) {
     var self = $(this);
@@ -145,7 +162,6 @@ $(document).ready(function() {
       var tween5 = new TweenMax.to(r, dur, {
         right: '+=' + (W_max - W_min),
         ease: Power1.easeIn,
-
       });
 
       timeline.add(tween5, '0');
@@ -154,13 +170,10 @@ $(document).ready(function() {
     var tween = new TweenMax.to(eventItem, dur, {
       width: '+=' + (W_max - W_min),
       ease: Power1.easeIn
-      // ease: SlowMo.ease.config(0.1, 0.4, false)
     });
     var tween2 = new TweenMax.to(eventItemImgWrap, dur, {
       maxHeight: '+=427',
       ease: Power1.easeIn
-      // ease: SteppedEase.config(40)
-      // ease: SlowMo.ease.config(0.1, 0.4, false)
     });
     var tween3 = new TweenMax.to(eventItemParagraph, dur, {
       top: 105,
@@ -299,6 +312,16 @@ $(document).ready(function() {
       menu.addClass('fxd').css({ 'opacity': 0 }).stop().animate({ 'opacity': 1 }, animdur);
       mainContent.addClass('fixed-menu');
     }
+
+
+    // if ( s===0 && 
+    //    (!(menu.hasClass('fxd'))) &&  
+    //    (!(menu.hasClass('scrlToClose')))) {
+
+    //     menu.addClass('scrlToClose');
+
+
+    // }
 
     // var leftVal = mContent.css('left');
     //     leftVal = leftVal.substr(0, leftVal.length - 2);
