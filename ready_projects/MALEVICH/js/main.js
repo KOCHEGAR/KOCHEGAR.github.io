@@ -96,9 +96,10 @@ $(document).ready(function() {
 
         whereToScroll = linkedAnchor1.offset().left - (985 - 346) + 4;
 
-        console.log('loc.pathname ' + location.pathname.split("/")[1]);
+        console.log('loc.pathname -1' + location.pathname.split("/")[1]);
       }
       console.log('whereToScroll ' + whereToScroll);
+      console.log('loc.pathname -2' + location.pathname.split("/")[1]);
 
       $('html,body').stop().animate({
         scrollLeft: whereToScroll
