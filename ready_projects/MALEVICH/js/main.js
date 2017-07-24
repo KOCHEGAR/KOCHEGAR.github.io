@@ -86,53 +86,29 @@ $(document).ready(function() {
         scrollLeft: '+=' + 350 //offset + width + magickNumber + openedOrClosedMenu
         // scrollLeft: eventsItems[0].querySelector('.event')
       }, 600, function() {
-        canPullOrNot = false;
+        // canPullOrNot = false;
       });
     } else if (tt.attr('id') === 'linkedAnchor-2') {
+      var whereToScroll = 0; // к началy страницы
+      var pagename = location.pathname.split("/")[1];
 
-      canPullOrNot = true;
+      if (pagename === '' ||
+        pagename === 'index.html' ||
+        pagename === 'index.php') {
 
-      // eventsItems.each(function () {
-      //   $(this).removeAttr('offset').removeClass('scrolled');
-      // });
-      // mContent.css({'left':0});
+        whereToScroll = linkedAnchor1.offset().left - (985 - 346) + 4;
+      }
+      // canPullOrNot = true;
+
       $('html,body').stop().animate({
-        scrollLeft: 0
+        scrollLeft: whereToScroll
       }, animdur + 650, function() {
-        canPullOrNot = false;
+        // canPullOrNot = false;
       });
     }
   });
 
 
-  (function() {
-
-
-    // var cor = new ScrollMagic.Controller({vertical: false});
-    // if (menu.hasClass('opened')) {
-    //   // mainContent
-    //   var tlm = new TimelineMax();
-
-    //   var tween = new  TweenMax.to(menu, 1,{
-    //     x: '-1280'
-    //   });
-    //   var tween1 = new TweenMax.to(mainContent, 1,{
-    //     x: '0'
-    //   });
-    //   tlm.add(tween,'0')
-    //   .add(tween1,'0');
-
-    //   var scene = new ScrollMagic.Scene({
-    //     triggerElement: $('.wrapper'),
-    //     duration:900,
-    //     triggerHook: 0
-    //   })
-    //   .setTween(tlm)
-    //   .addIndicators()
-    //   .addTo(cor);
-    // }
-
-  }());
 
   $('.events .events__item').each(function(indx, el) {
     var self = $(this);
@@ -204,17 +180,11 @@ $(document).ready(function() {
       .addIndicators()
       .addTo(controller);
 
-    // scene.on("progress", function (event) {
-    //   console.log("Scene progress changed to " + event.progress);
-    //   console.log("scrollDirection " + event.scrollDirection);
-    // });
+
   });
 
 
-  // new TweenMax.staggerFromTo('.events__item', 0.5, 
-  //  {opacity:0, backgroundColor:'white'},
-  //  {opacity:1,backgroundColor:'green'} ,
-  //  0.4);
+
 
   function myUpdFunk(indx, trgt) {
     console.log(indx + '---' + trgt.parentElement.offsetLeft);
@@ -288,6 +258,8 @@ $(document).ready(function() {
   // var W_max = 985;
 
   var s_Max = 0;
+
+
 
 
   $(window).on('scroll', function(e) {

@@ -739,7 +739,6 @@ body.ovHidden {
   display: flex;
   height: 100%;
   position: relative;
-  min-width: 5400px;
 }
 
 .events__item {
@@ -764,7 +763,7 @@ body.ovHidden {
   padding-bottom: 10px;
   -webkit-transition: right .1s ease;
   transition: right .1s ease;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .event__number {
@@ -835,8 +834,7 @@ body.ovHidden {
 }
 
 .empty-space-block {
-  -webkit-transition: max-width .6s ease, min-width .6s ease;
-  transition: max-width .6s ease, min-width .6s ease;
+  min-width: 782px;
 }
 
 .our-vision-text {
