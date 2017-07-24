@@ -82,12 +82,10 @@ $(document).ready(function() {
       }
 
       $('html,body').stop().animate({
-        // составное число для смещения скролла
+
         scrollLeft: '+=' + 350 //offset + width + magickNumber + openedOrClosedMenu
-        // scrollLeft: eventsItems[0].querySelector('.event')
-      }, 600, function() {
-        // canPullOrNot = false;
-      });
+
+      }, 600, function() {});
     } else if (tt.attr('id') === 'linkedAnchor-2') {
       var whereToScroll = 0; // к началy страницы
       var pagename = location.pathname.split("/")[1];
@@ -97,14 +95,14 @@ $(document).ready(function() {
         pagename === 'index.php') {
 
         whereToScroll = linkedAnchor1.offset().left - (985 - 346) + 4;
+
+        console.log('loc.pathname ' + location.pathname.split("/")[1]);
       }
-      // canPullOrNot = true;
+      console.log('whereToScroll ' + whereToScroll);
 
       $('html,body').stop().animate({
         scrollLeft: whereToScroll
-      }, animdur + 650, function() {
-        // canPullOrNot = false;
-      });
+      }, animdur + 650, function() {});
     }
   });
 
@@ -166,7 +164,7 @@ $(document).ready(function() {
       .add(tween2, '0')
       .add(tween3, '0')
       .add(tween4, '0');
-    // .add(tween5,'0');
+
 
     var scene = new ScrollMagic.Scene({
         triggerElement: self,
@@ -184,11 +182,6 @@ $(document).ready(function() {
   });
 
 
-
-
-  function myUpdFunk(indx, trgt) {
-    console.log(indx + '---' + trgt.parentElement.offsetLeft);
-  }
 
 
   ///onscroll functions
@@ -245,17 +238,7 @@ $(document).ready(function() {
   var lastScrollLeft = 0;
 
   var windowWidth = 0;
-  // eventsItems.each(function () {
-  //   $(this).addClass('scrolled');
-  // });
 
-  // esb.css({
-  //   'min-width' : '885px',
-  //   'max-width' : '885px'
-  // });
-
-  // var W_min = 346;
-  // var W_max = 985;
 
   var s_Max = 0;
 
@@ -314,7 +297,7 @@ $(document).ready(function() {
       // 
       if ((s + halfWindow >= itemOffsetLeft) && (!(self.hasClass('onview')))) {
 
-        self.css({ 'borderColor': 'green' });
+        // self.css({'borderColor': 'green'});
         // self.css({'opacity': '0'});
         // self.addClass('onview');
       }
@@ -323,7 +306,7 @@ $(document).ready(function() {
       // отчасти рабочий вариант 
       if ((s + halfWindow >= itemRightSide + 28 - 346 && self.hasClass('onview')) /*&& (itemRightSide > s+rightSideOf_Menu+400)*/ ) {
 
-        self.css({ 'borderColor': 'red' });
+        // self.css({'borderColor' : 'red'});
 
 
         //     console.log();
