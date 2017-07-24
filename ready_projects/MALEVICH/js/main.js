@@ -88,7 +88,7 @@ $(document).ready(function() {
       }, 600, function() {});
     } else if (tt.attr('id') === 'linkedAnchor-2') {
       var whereToScroll = 0; // к началy страницы
-      var pagename = location.pathname.split("/")[1];
+      var pagename = location.pathname.split("/")[0];
 
       if (pagename === '' ||
         pagename === 'index.html' ||
@@ -96,10 +96,10 @@ $(document).ready(function() {
 
         whereToScroll = linkedAnchor1.offset().left - (985 - 346) + 4;
 
-        console.log('loc.pathname -1' + location.pathname.split("/")[1]);
+        console.log('loc.pathname -1' + location.pathname.split("/")[0]);
       }
       console.log('whereToScroll ' + whereToScroll);
-      console.log('loc.pathname -2' + location.pathname.split("/")[1]);
+      console.log('loc.pathname -2' + location.pathname.split("/")[0]);
 
       $('html,body').stop().animate({
         scrollLeft: whereToScroll
